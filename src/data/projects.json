@@ -1,0 +1,4 @@
+[
+    { "id": 1, "title": "Workintech", "description": "A project management tool.", "link": "https://example.com" },
+    { "id": 2, "title": "Random Jokes", "description": "A joke generator app.", "link": "https://example.com" }
+  ]

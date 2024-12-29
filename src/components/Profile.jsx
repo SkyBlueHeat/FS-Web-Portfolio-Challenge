@@ -11,49 +11,80 @@ const Profile = ({ user }) => {
     }
   return (
 
- 
-    <div class="relative max-w-md mx-auto md:max-w-7xl min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
-    <div class="px-6">
-        <div class="flex flex-wrap justify-center">
-            <div class="w-full flex justify-center">
-                <div class="relative">
-                    <img src="src\assets\bora.png" class="shadow-xl rounded-full align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-[150px]"/>
-                </div>
-            </div>
-            <div class="w-full text-center mt-20">
-                <div class="flex justify-center lg:pt-4 pt-8 pb-0">
-                    <div class="p-3 text-center">
-                        <span class="text-xl font-bold block uppercase tracking-wide text-slate-700">3,360</span>
-                        <span class="text-sm text-slate-400">Photos</span>
-                    </div>
-                    <div class="p-3 text-center">
-                        <span class="text-xl font-bold block uppercase tracking-wide text-slate-700">2,454</span>
-                        <span class="text-sm text-slate-400">Followers</span>
-                    </div>
+ <>
+      
 
-                    <div class="p-3 text-center">
-                        <span class="text-xl font-bold block uppercase tracking-wide text-slate-700">564</span>
-                        <span class="text-sm text-slate-400">Following</span>
-                    </div>
-                </div>
+   <div class="sm:mb-10 lg:grid lg:grid-cols-5 md:grid-cols-none md:bg-gray-300 bg-gray-300 lg:bg-white lg:h-full flex space-x-2">
+   <div class="hidden relative lg:block  lg:col-span-3 ml-52">
+   <h2 class="text-5xl font-bold mb-20  ">Profile</h2>
+   <div class="bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg">
+    
+    <div class="px-4 py-5 sm:px-6">
+        <h3 class="text-3xl leading-6 font-normal text-blue-800">
+            Profile
+        </h3>
+        
+    </div>
+    <div class="border-t border-gray-200">
+        <dl>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <h1 class="text-sm font-medium text-gray-500">
+                    Birth Date
+                </h1>
+                <p class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    18.01.1999
+                </p>
             </div>
-        </div>
-        <div class="text-center mt-2">
-            <h3 class="text-2xl text-slate-700 font-bold leading-normal mb-1">Bora Aydın</h3>
-            <div class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
-                <i class="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"></i>Turkey
+            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <h1 class="text-sm font-medium text-gray-500">
+                City of Residence
+                </h1>
+                <p class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    Ankara
+                </p>
             </div>
-        </div>
-        <div class="mt-6 py-6 border-t border-slate-200 text-center">
-            <div class="flex flex-wrap justify-center">
-                <div class="w-full px-4">
-                    <p class="font-light leading-relaxed text-slate-600 mb-4">An artist of considerable range, Mike is the name taken by Melbourne-raised, Brooklyn-based Nick Murphy writes, performs and records all of his own music, giving it a warm.</p>
-                    <a href="javascript:;" class="font-normal text-slate-700 hover:text-slate-400">Follow Account</a>
-                </div>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <h1 class="text-sm font-medium text-gray-500">
+                Educational Status
+                </h1>
+                <p class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                    Ufuk University - Computer Programing
+                </p>
             </div>
-        </div>
+            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <h1 class="text-sm font-medium text-gray-500">
+                Preferred Role
+                </h1>
+                <p class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                Frontend, UI
+                </p>
+            </div>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <h1 class="text-sm font-medium text-gray-500">
+            Hobbies
+                </h1>
+                <p class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                Playing electric guitar. swimming, extreme
+sports are interested.(Cross, Downhill
+skateboarding)
+                </p>
+            </div>
+        </dl>
     </div>
 </div>
+      </div>
+      <div class=" px-10  py-10 max-w-md m-auto lg:col-span-2 mt-20 mb-20 shadow-xl rounded-xl lg:mt-10 md:shadow-xl md:rounded-xl lg:shadow-none lg:rounded-none lg:w-full lg:mb-10 lg:px-5 lg:pt-5 lg:pb-5 lg:max-w-lg bg-white">
+        <h1 class="font-semibold text-4xl mt-40 text-blue-800 ">About Me</h1>
+       
+        <h1 class="text-lg text-gray-600 text-justify pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</h1>
+        <h1 class="text-lg text-gray-600 text-justify pt-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</h1>
+        
+      </div>
+
+      
+    </div>
+
+</>
   );
 };
 

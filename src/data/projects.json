@@ -1,4 +1,26 @@
 [
-    { "id": 1, "title": "Workintech", "description": "A project management tool.", "link": "https://example.com" },
-    { "id": 2, "title": "Random Jokes", "description": "A joke generator app.", "link": "https://example.com" }
-  ]
+  {
+    "title": "Workintech",
+    "description": "Project 1 description goes here.",
+    "image": "resim1.jpg",
+    "technologies": ["React", "Redux", "Axios"],
+    "githubLink": "#",
+    "viewLink":"#"
+  },
+  {
+    "title": "Portfolio",
+    "description": "Project 2 description goes here.",
+    "image": "resim2.jpg",
+    "technologies": ["React", "Node.js", "Express"],
+        "githubLink": "#",
+        "viewLink":"#"
+  },
+  {
+    "title": "Pizza",
+    "description": "Project 3 description goes here.",
+    "image": "resim3.jpg",
+    "technologies": ["Vue", "Vuex"],
+        "githubLink": "#",
+        "viewLink":"#"
+  }
+]

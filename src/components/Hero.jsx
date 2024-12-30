@@ -84,7 +84,7 @@ const ComponentName = () => {
                 </div>
 
                 <div>
-                    <img className="size-6/12 ml-auto rounded-3xl" src="src\assets\Hero-img-2.jpg" alt="" />
+                    <img className="sm:size-5/6 sm:mr-14 size-6/12 ml-auto rounded-3xl" src="src\assets\Hero-img-2.jpg" alt="" />
                 </div>
             </div>
         </div>

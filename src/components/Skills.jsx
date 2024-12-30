@@ -1,27 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
+import { LanguageContext } from '../context/LanguageContext';
+import  en  from '../data/en.json';
+import  tr  from '../data/tr.json';
 
 
 const Skills = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { language, toggleLanguage } = useContext(LanguageContext);
+  const translations = language === "en" ? en : tr;
   return (
-    <div class="items-center px-48 flex-wrap divide-z">
-      <h2 class="text-5xl font-bold mb-4  ml-4">Skills</h2>
-    <div class="flex space-x-4">
-  
-      <div class="card h-60 bg-white p-4 rounded-lg ">
-        
-        <h5 class="mb-8 text-4xl text-blue-800">Java Script</h5>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div className={`bg-white py-12 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12">{translations.skills}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class=" md:text-left">
+        <h3 class="text-2xl font-semibold text-blue-800 mb-4">Java Script</h3>
+        <p class="text-gray-600 text-base">{translations.react}</p>
       </div>
-      <div class="card bg-white p-4 rounded-lg ">
-      <h5 class="mb-8 text-4xl text-blue-800">React.Js</h5>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="md:text-left">
+        <h3 class="text-2xl font-semibold text-blue-800 mb-4">React.Js</h3>
+        <p class="text-gray-600 text-base">{translations.redux}</p>
       </div>
-      <div class="card bg-white p-4 rounded-lg ">
-      <h5 class="mb-8 text-4xl text-blue-800">Node.js</h5>
-        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class=" md:text-left">
+        <h3 class="text-2xl font-semibold text-blue-800 mb-4">Node.Js</h3>
+        <p class="text-gray-600 text-base">{translations.axios}</p>
       </div>
     </div>
   </div>
+</div>
   );
 };
 

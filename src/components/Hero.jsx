@@ -4,10 +4,16 @@ import { ThemeContext } from '../context/ThemeContext';
 import en from '../data/en.json';
 import tr from '../data/tr.json';
 import img from '../../public/Hero-img.jpg';
+
 const Hero = () => {
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
   const translations = language === "en" ? en : tr;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prevState) => !prevState);
+  };
 
   return (
     <div className={`bg-white ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
@@ -20,14 +26,16 @@ const Hero = () => {
               </div>
             </div>
 
+            {/* Hamburger menu button for mobile */}
             <div className="flex lg:hidden">
-              <button type="button" className={`text-gray-900 ${theme === 'dark' ? 'text-white' : ''}`}>
+              <button type="button" className={`text-gray-900 ${theme === 'dark' ? 'text-white' : ''}`} onClick={toggleMenu}>
                 <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
               </button>
             </div>
 
+            {/* Desktop menu */}
             <div className={`hidden lg:ml-auto lg:flex lg:items-center lg:space-x-8 xl:space-x-10 ${theme === 'dark' ? 'text-white ' : 'text-gray-900 '}`}>
               <a href="#" title="" className={`text-base font-medium transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2`}>
                 {translations.skills}
@@ -45,6 +53,21 @@ const Hero = () => {
         </div>
       </header>
 
+      {/* Mobile menu - shown when isMenuOpen is true */}
+      {isMenuOpen && (
+        <div className={ `flex gap-7 justify-end lg:hidden bg-slate-500 p-10 ${theme === 'dark' ? 'text-sky-500 bg-gray-800' : 'text-black'}`}>
+          <a href="#" className={`block text-base font-medium text-gray-900 ${theme === 'dark' ? 'text-black' : 'text-black'} hover:text-opacity-50`}>
+            {translations.skills}
+          </a>
+          <a href="#" className={`block text-base font-medium text-gray-900 ${theme === 'dark' ? 'text-black' : 'text-black'} hover:text-opacity-50`}>
+            {translations.projects}
+          </a>
+          <a href="#" className={`block text-base font-medium text-sky-500 border rounded-lg  p-3 -mt-3 back ${theme === 'dark' ? 'text-sky-500 bg-slate-300' : 'text-black'} hover:text-opacity-50`}>
+            {translations.hireMe}
+          </a>
+        </div>
+      )}
+
       <section className={`pt-12 pb-12 sm:pb-16 lg:pt-8 ${theme === 'dark' ? 'bg-gray-800' : ''}`}>
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex items-center">
@@ -60,30 +83,6 @@ const Hero = () => {
                 <p className={`mt-2 text-lg sm:mt-8 font-inter ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                   {translations.bora}
                 </p>
-
-                <div className="flex space-x-4 mt-6">
-  <div>
-    <button className={`flex items-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'} border border-blue-900 rounded-lg shadow-md px-6 py-2 text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-800'} hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}>
-      <img className="w-4 mr-2" src="src/assets/github-mark.png" alt="" />
-      <span className={theme === 'dark' ? 'text-white' : 'text-blue-900'}>{translations.hireMe}</span>
-    </button>
-  </div>
-
-  <div>
-    <button className={`flex items-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'} border border-blue-900 rounded-lg shadow-md px-6 py-2 text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-800'} hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}>
-      <img className="w-4 mr-2" src="src/assets/github-mark.png" alt="" />
-      <span className={theme === 'dark' ? 'text-white' : 'text-blue-900'}>Github</span>
-    </button>
-  </div>
-
-  <div>
-    <button className={`flex items-center ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'} border border-blue-900 rounded-lg shadow-md px-6 py-2 text-sm font-medium ${theme === 'dark' ? 'text-white' : 'text-gray-800'} hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}>
-      <img className="w-4 mr-2" src="src/assets/LI-In-Bug.png" alt="" />
-      <span className={theme === 'dark' ? 'text-white' : 'text-blue-900'}>Linkedin</span>
-    </button>
-  </div>
-</div>
-
               </div>
             </div>
 

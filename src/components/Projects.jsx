@@ -28,8 +28,8 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <a href={project.githubLink} className="text-blue-500 hover:underline">Github</a>
-              <a href={project.viewLink} className={`text-gray-500 hover:underline ml-4 float-right ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>
+              <a href="https://github.com/SkyBlueHeat/FS-Web-Portfolio-Challenge" className="text-blue-500 hover:underline">Github</a>
+              <a href="https://fs-web-portfolio-challenge.vercel.app/" className={`text-gray-500 hover:underline ml-4 float-right ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}>
                 {translations.projectsViewLink}
               </a>
             </div>

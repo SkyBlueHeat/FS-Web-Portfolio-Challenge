@@ -88,7 +88,7 @@ const Hero = () => {
             </div>
 
             <div>
-              <img className="sm:size-5/6 sm:mr-14 size-6/12 ml-auto rounded-3xl" src="public\Hero-img.jpg" alt="" />
+              <img className="sm:size-5/6 sm:mr-14 size-6/12 ml-auto rounded-3xl" src="/Hero-img.jpg" alt="Hero" />
             </div>
           </div>
         </div>

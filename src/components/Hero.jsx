@@ -3,7 +3,7 @@ import { LanguageContext } from '../context/LanguageContext';
 import { ThemeContext } from '../context/ThemeContext';
 import en from '../data/en.json';
 import tr from '../data/tr.json';
-
+import img from '../assets/Hero-img.jpg';
 const Hero = () => {
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
@@ -88,7 +88,7 @@ const Hero = () => {
             </div>
 
             <div>
-              <img className="sm:size-5/6 sm:mr-14 size-6/12 ml-auto rounded-3xl" src="src\assets\WhatsApp Görsel 2025-01-01 saat 00.13.10_71dca5ff.jpg" alt="" />
+              <img className="sm:size-5/6 sm:mr-14 size-6/12 ml-auto rounded-3xl" src="src\assets\Hero-img.jpg" alt="" />
             </div>
           </div>
         </div>

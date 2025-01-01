@@ -21,7 +21,7 @@ const Profile = () => {
         <div className={`py-10 lg:py-0 mb-10 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
         <div className={`container mx-auto px-6 lg:px-10 lg:grid lg:grid-cols-5 lg:h-full flex flex-col lg:flex-row lg:items-stretch space-y-10 lg:space-y-0 lg:space-x-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
           <div className="lg:col-span-3 lg:pl-20 lg:-space-x-24 lg:space-x-2">
-            <h2 className={`text-4xl lg:text-5xl font-bold mb-10 -ml-24 lg:mb-20 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+            <h2 className={`text-4xl lg:text-5xl font-bold  mb-10  ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               Profil
             </h2>
             <div className={`max-w-2xl shadow rounded-lg ${theme === 'dark' ? 'bg-gray-600 text-gray-300' : 'bg-white text-gray-600'}`}>

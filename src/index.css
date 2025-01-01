@@ -15,4 +15,9 @@ body {
     background-color: #1f2a38; /* Karanlık tema arka planı */
     color: white; /* Karanlık tema metni */
   }
+  @media only screen and (max-width: 639px) {
+    body {
+      width: 950px;
+    }
+  }
   

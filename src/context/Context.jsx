@@ -7,33 +7,42 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState({});
-  const [toastShown, setToastShown] = useState(false);
+  const toastId = "unique-toast-id"; // Benzersiz bir ID tanımlandı
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post("https://reqres.in/api/workintech", data);
-        setData(response.data);
-        if (!toastShown) { 
-          setToastShown(true);
+    axios
+      .post("https://reqres.in/api/workintech", data)
+      .then(() => {
+        if (!toast.isActive(toastId)) { // Aynı ID'deki mesajın aktif olup olmadığını kontrol et
           toast.success("Bilgiler başarıyla API'a iletildi 👍", {
-            toastId: 'success1',
-            position: "top-right",
-            theme: "dark",
-            autoClose: 2000,
+            toastId: toastId, // Benzersiz ID atanıyor
+            position: "top-left",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
           });
         }
-      } catch (error) {
-        toast.error("Bir hata oluştu:", error, {
-          toastId: 'success1',
-          position: "top-right",
-          autoClose: 2000,
-        });
-      }
-    };
-
-    fetchData();
-  }, [data]);
+      })
+      .catch((err) => {
+        if (!toast.isActive(toastId)) {
+          toast.error(`Bir hata oluştu: ${err.message}`, {
+            toastId: toastId,
+            position: "top-left",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+        }
+      });
+  }, []); // Sadece ilk yüklemede çalıştırılır
 
   return (
     <DataContext.Provider value={{ data }}>

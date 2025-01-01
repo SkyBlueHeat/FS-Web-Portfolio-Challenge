@@ -19,7 +19,7 @@ const Footer = () => {
           <span className="text-yellow-400 text-xl">👉</span>
           <a
             href="mailto:almilasucode@gmail.com"
-            className={`underline text-2xl ${theme === 'dark' ? 'text-red-500' : 'text-gray-900'}`}
+            className={`underline text-2xl ${theme === 'dark' ? 'text-red-500' : 'text-red-500'}`}
           >
             br.aydin@hotmail.com
           </a>
@@ -27,10 +27,10 @@ const Footer = () => {
       </div>
     
       <div className="flex gap-6 sm:-ml-72">
-        <a href="#" className={`text-gray-800 text-xl ${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'}`}>Personal Blog</a>
-        <a href="#" className={`text-green-600 text-xl ${theme === 'dark' ? 'text-green-400' : 'text-green-600'}`}>Github</a>
-        <a href="#" className={`text-blue-600 text-xl ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}>Linkedin</a>
-      </div>
+  <a href="#" className={`text-xl ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>Personal Blog</a>
+  <a href="#" className={`text-xl ${theme === 'dark' ? 'text-green-400' : 'text-green-600'}`}>Github</a>
+  <a href="#" className={`text-xl ${theme === 'dark' ? 'text-blue-400' : 'text-blue-600'}`}>Linkedin</a>
+</div>
     </div>
   );
 };

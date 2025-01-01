@@ -4,7 +4,7 @@ import { ThemeContext } from '../context/ThemeContext';
 import { LanguageContext } from '../context/LanguageContext';
 import en from '../data/en.json';
 import tr from '../data/tr.json';
-import imga from '../assets/Project-Portfolio.jpg';
+import img from '../../public/Project-Portfolio.jpg';
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
@@ -17,7 +17,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div key={index} className={`rounded-lg shadow-md overflow-hidden ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'}`}>
-            <img src="src\assets\Project-Portfolio.jpg" alt={project.title} className="w-full h-48 object-cover" />
+            <img src="../../public/Project-Portfolio.jpg" alt={project.title} className="w-full h-48 object-cover" />
             <div className="p-6">
               <h3 className={`text-2xl font-semibold mb-2 ${theme === 'dark' ? 'text-blue-400' : 'text-blue-800'}`}>{project.title}</h3>
               <p className={`text-base mb-4 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{translations.projectsTitle}</p>

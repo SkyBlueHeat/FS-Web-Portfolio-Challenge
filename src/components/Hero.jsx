@@ -5,7 +5,6 @@ import { ThemeContext } from '../context/ThemeContext';
 import en from '../data/en.json';
 import tr from '../data/tr.json';
 
-
 const Header = ({ translations, theme, toggleMenu }) => (
   <header className={`py-4 md:py-6 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
     <div className="container px-4 mx-auto sm:px-6 lg:px-8">
@@ -57,25 +56,89 @@ const MobileMenu = ({ isMenuOpen, translations, theme }) => (
 );
 
 const Modal = ({ isOpen, onClose }) => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [errors, setErrors] = useState({});
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.email) newErrors.email = 'Email is required';
+    if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
+    if (!formData.message) newErrors.message = 'Message is required';
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    fetch('http://localhost:5000/api/sendEmail', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    name: formData.name, 
+    email: formData.email,
+    message: formData.message,
+  }),
+})
+  .then(async (response) => {
+    const data = await response.json();
+    if (response.ok) { 
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+      onClose();
+    } else {
+      alert(`Failed to send message: ${data.error}`);
+    }
+  })
+  .catch(() => alert('An error occurred while sending the message.'));
+
+  };
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
       <div className="bg-slate-800 p-8 rounded-lg max-w-md w-full relative">
         <h2 className="text-2xl font-bold mb-4">Hire Me</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-sm font-medium  text-gray-100">Name</label>
-            <input type="text" className="mt-1 p-2 w-full bg-slate-600 border rounded-md" required />
+            <input
+              type="text"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="mt-1 p-2 w-full bg-slate-600 border rounded-md"
+              required
+            />
+            {errors.name && <p className="text-red-500">{errors.name}</p>}
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-100">Email</label>
-            <input type="email" className="mt-1 p-2 w-full bg-slate-600 border rounded-md" required />
+            <input
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              className="mt-1 p-2 w-full bg-slate-600 border rounded-md"
+              required
+            />
+            {errors.email && <p className="text-red-500">{errors.email}</p>}
           </div>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-100">Message</label>
-            <textarea className="mt-1 p-2 w-full border bg-slate-600 rounded-md" rows="4" required></textarea>
+            <textarea
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              className="mt-1 p-2 w-full border bg-slate-600 rounded-md"
+              rows="4"
+              required
+            ></textarea>
+            {errors.message && <p className="text-red-500">{errors.message}</p>}
           </div>
+
           <div className="flex justify-end gap-4">
             <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-300 rounded-md">Cancel</button>
             <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded-md">Send</button>

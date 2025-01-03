@@ -40,8 +40,8 @@
     },
     "image": "E-Commerce-App.jpg",
     "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-    "githubLink": "https://github.com/username/e-commerce-app",
-    "viewLink": "https://e-commerce-app.example.com/"
+    "githubLink": "#",
+    "viewLink": "#"
   },
   {
     "title": "Weather Forecast App",
@@ -51,8 +51,8 @@
     },
     "image": "Weather-App.jpg",
     "technologies": ["React", "API Integration", "CSS"],
-    "githubLink": "https://github.com/username/weather-app",
-    "viewLink": "https://weather-app.example.com/"
+    "githubLink": "#",
+    "viewLink": "#"
   },
   {
     "title": "Task Management App",
@@ -62,8 +62,8 @@
     },
     "image": "Task-Manager.jpg",
     "technologies": ["React", "Context API", "Node.js", "Express"],
-    "githubLink": "https://github.com/username/task-manager",
-    "viewLink": "https://task-manager.example.com/"
+    "githubLink": "#",
+    "viewLink": "#"
   }
   
   

@@ -37,8 +37,8 @@ const Projects = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow:3,
+    slidesToScroll: 3,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     responsive: [
@@ -54,24 +54,24 @@ const Projects = () => {
   };
 
   return (
-    <div className={`mb-20 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+    <div className={`mb-20 flex justify-stretch ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
       <div className="container mx-auto px-4 py-8">
         <h2 className={`text-3xl font-bold mb-8 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
           {translations.projects}
         </h2>
-        <div className="relative">
+        <div className="relative ">
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} className="p-4">
+              <div key={index} className="p-4 ">
                 <div
-                  className={`rounded-lg shadow-md overflow-hidden ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'}`}
+                  className={`rounded-lg shadow-md overflow-hidden h-full flex flex-col min-h-[400px]  ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'}`}
                 >
                   <img
                     src={project.image || '/Project-Portfolio.jpg'}
                     alt={project.title}
                     className="w-full h-48 object-cover"
                   />
-                  <div className="p-6">
+                  <div className="p-6 flex-grow flex flex-col min-h-[400px]">
                     <h3
                       className={`text-2xl font-semibold mb-2 ${theme === 'dark' ? 'text-blue-400' : 'text-blue-800'}`}
                     >
@@ -83,7 +83,7 @@ const Projects = () => {
                       {translations.projectsTitle}
                     </p>
                     <p
-                      className={`text-base mb-4 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}
+                      className={`text-base mb-4 flex-grow ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}
                     >
                       {project.description[language]} 
                     </p>
@@ -97,22 +97,24 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
-                    <a
-                      href={project.githubLink && project.githubLink !== "#" ? project.githubLink : "https://github.com/yourdefaultlink"}
-                      className="text-blue-500 hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github
-                    </a>
-                    <a
-                      href={project.viewLink && project.viewLink !== "#" ? project.viewLink : "https://yourviewlink.com"}
-                      className={`text-gray-500 hover:underline ml-4 float-right ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {translations.projectsViewLink}
-                    </a>
+                    <div className="mt-auto flex justify-between items-center">
+                      <a
+                        href={project.githubLink && project.githubLink !== "#" ? project.githubLink : "https://github.com/yourdefaultlink"}
+                        className="text-blue-500 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Github
+                      </a>
+                      <a
+                        href={project.viewLink && project.viewLink !== "#" ? project.viewLink : "https://yourviewlink.com"}
+                        className={`text-gray-500 hover:underline ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {translations.projectsViewLink}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -121,6 +123,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

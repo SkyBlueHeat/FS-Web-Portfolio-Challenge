@@ -3,12 +3,12 @@
     "title": "Workintech",
     "description": {
       "en": "This project is an e-commerce platform where users can browse products, add them to their cart, and proceed with checkout. Developed with React and Redux, it contains a series of components to manage user interactions. The application allows users to view their previous purchases, save favorite items, and complete their shopping process with ease. Payment integration and user login processes are also included in the project.",
-      "tr": "Bu proje, kullanıcıların ürünleri görüntülemesini, sepete eklemesini ve ödeme işlemi yapmasını sağlayan bir e-ticaret platformu olarak tasarlanmıştır. React ve Redux kullanılarak geliştirilmiştir ve kullanıcı etkileşimlerini yönetmek için bir dizi bileşen içerir. Uygulama, kullanıcıların önceki alışverişlerini görüntülemelerine, favori ürünlerini kaydetmelerine ve alışverişlerini kolayca tamamlamalarına olanak tanır. Ayrıca, ödeme entegrasyonu ve kullanıcı oturum açma işlemleri de projeye dahil edilmiştir."
+      "tr": "Bu proje, kullanıcıların ürünleri görüntülemesini, sepete eklemesini ve ödeme işlemi yapmasını sağlayan bir e-ticaret platformu olarak tasarlanmıştır. React ve Redux kullanılarak geliştirilmiştir ve kullanıcı etkileşimlerini yönetmek için bir dizi bileşen içerir. Uygulama, kullanıcıların önceki alışverişlerini görüntülemelerine, favori ürünlerini kaydetmelerine ve alışverişlerini kolayca tamamlamalarına olanak tanır."
     },
     "image": "project-dexter-banner.PNG",
     "technologies": ["React", "Css", "Axios"],
     "githubLink": "https://github.com/SkyBlueHeat/WitFlic-Project",
-    "viewLink": "#"
+    "viewLink": "https://wit-flic-project.vercel.app/"
   },
   {
     "title": "Portfolio",
@@ -30,7 +30,7 @@
     "image": "Project-pizza-bannerı.PNG",
     "technologies": ["Html", "Css", "JavaScript"],
     "githubLink": "https://github.com/SkyBlueHeat/fsweb-s8-challenge-pizza",
-    "viewLink": "#"
+    "viewLink": "https://fsweb-s8-challenge-pizza-three.vercel.app/"
   },
   {
     "title": "E-Commerce Application",

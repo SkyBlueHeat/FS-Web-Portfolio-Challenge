@@ -7,15 +7,15 @@ export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState({});
-  const toastId = "unique-toast-id"; // Benzersiz bir ID tanımlandı
+  const toastId = "unique-toast-id";
 
   useEffect(() => {
     axios
       .post("https://reqres.in/api/workintech", data)
       .then(() => {
-        if (!toast.isActive(toastId)) { // Aynı ID'deki mesajın aktif olup olmadığını kontrol et
+        if (!toast.isActive(toastId)) { 
           toast.success("Bilgiler başarıyla API'a iletildi 👍", {
-            toastId: toastId, // Benzersiz ID atanıyor
+            toastId: toastId, 
             position: "top-left",
             autoClose: 1000,
             hideProgressBar: false,
@@ -42,7 +42,7 @@ export const DataProvider = ({ children }) => {
           });
         }
       });
-  }, []); // Sadece ilk yüklemede çalıştırılır
+  }, []); 
 
   return (
     <DataContext.Provider value={{ data }}>

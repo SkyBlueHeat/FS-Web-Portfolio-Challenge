@@ -1,26 +1,71 @@
 [
   {
     "title": "Workintech",
-    "description": "Project 1 description goes here.",
-    "image": "resim1.jpg",
-    "technologies": ["React", "Redux", "Axios"],
-    "githubLink": "#",
-    "viewLink":"#"
+    "description": {
+      "en": "This project is an e-commerce platform where users can browse products, add them to their cart, and proceed with checkout. Developed with React and Redux, it contains a series of components to manage user interactions. The application allows users to view their previous purchases, save favorite items, and complete their shopping process with ease. Payment integration and user login processes are also included in the project.",
+      "tr": "Bu proje, kullanıcıların ürünleri görüntülemesini, sepete eklemesini ve ödeme işlemi yapmasını sağlayan bir e-ticaret platformu olarak tasarlanmıştır. React ve Redux kullanılarak geliştirilmiştir ve kullanıcı etkileşimlerini yönetmek için bir dizi bileşen içerir. Uygulama, kullanıcıların önceki alışverişlerini görüntülemelerine, favori ürünlerini kaydetmelerine ve alışverişlerini kolayca tamamlamalarına olanak tanır. Ayrıca, ödeme entegrasyonu ve kullanıcı oturum açma işlemleri de projeye dahil edilmiştir."
+    },
+    "image": "project-dexter-banner.PNG",
+    "technologies": ["React", "Css", "Axios"],
+    "githubLink": "https://github.com/SkyBlueHeat/WitFlic-Project",
+    "viewLink": "#"
   },
   {
     "title": "Portfolio",
-    "description": "Project 2 description goes here.",
-    "image": "resim2.jpg",
-    "technologies": ["React", "Node.js", "Express"],
-        "githubLink": "#",
-        "viewLink":"#"
+    "description": {
+      "en": "A blog application developed with React, allowing users to create, edit, and share content. The app includes a user login and registration system, where users can track their posts. The admin panel allows for deleting, editing, or approving blog posts. Blog articles and comments are stored in a database and are dynamically rendered using React components.",
+      "tr": "React ile geliştirilmiş bir blog uygulaması, kullanıcıların içerik oluşturmasına, düzenlemesine ve başkalarıyla paylaşmasına olanak tanır. Uygulama, bir kullanıcı girişi ve kayıt sistemiyle, kullanıcının yazılarını takip etmesine imkan tanır. Yönetici paneli, blog yazılarını silme, düzenleme veya onaylama işlemlerine olanak tanır. Blog yazıları ve yorumlar bir veritabanına kaydedilir ve tüm içerik, React bileşenleri kullanılarak dinamik bir şekilde render edilir."
+    },
+    "image": "Project-Portfolio.jpg",
+    "technologies": ["React", "TailWind", "JavaScript", "Axios"],
+    "githubLink": "https://github.com/SkyBlueHeat/FS-Web-Portfolio-Challenge",
+    "viewLink": "https://fs-web-portfolio-challenge.vercel.app/"
   },
   {
     "title": "Pizza",
-    "description": "Project 3 description goes here.",
-    "image": "resim3.jpg",
-    "technologies": ["Vue", "Vuex"],
-        "githubLink": "#",
-        "viewLink":"#"
+    "description": {
+      "en": "This React application allows users to manage individual or team-based tasks. Users can create new tasks, change their completion status, and assign deadlines. The app uses Redux for global state management, allowing users to organize all their tasks. Tasks can be filtered by category and priority, and users can add comments to tasks as well.",
+      "tr": "React kullanılarak geliştirilen bu uygulama, bireysel veya takım bazlı görevlerin yönetilmesini sağlar. Kullanıcılar yeni görevler oluşturabilir, görevlerin tamamlanma durumlarını değiştirebilir ve görevlerine bir son tarih atayabilir. Uygulama, Redux ile global durum yönetimi yaparak, kullanıcıların tüm görevlerini düzenlemelerine olanak tanır. Görevler, kategoriler ve öncelik seviyelerine göre filtrelenebilir ve kullanıcılar görevlerine ek açıklamalar da yapabilir."
+    },
+    "image": "Project-pizza-bannerı.PNG",
+    "technologies": ["Html", "Css", "JavaScript"],
+    "githubLink": "https://github.com/SkyBlueHeat/fsweb-s8-challenge-pizza",
+    "viewLink": "#"
+  },
+  {
+    "title": "E-Commerce Application",
+    "description": {
+      "en": "An e-commerce platform developed with React and Redux, enabling users to browse products, add them to their cart, and complete purchases. The app integrates payment gateways and includes a user authentication system for secure transactions. Product categories and a dynamic search bar enhance the shopping experience.",
+      "tr": "React ve Redux ile geliştirilen bir e-ticaret platformudur. Kullanıcılar ürünleri inceleyebilir, sepete ekleyebilir ve satın alabilirler. Uygulama, ödeme sistemleri entegrasyonu ve güvenli işlem için kullanıcı doğrulama sistemine sahiptir. Ürün kategorileri ve dinamik bir arama çubuğu alışveriş deneyimini iyileştirir."
+    },
+    "image": "E-Commerce-App.jpg",
+    "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
+    "githubLink": "https://github.com/username/e-commerce-app",
+    "viewLink": "https://e-commerce-app.example.com/"
+  },
+  {
+    "title": "Weather Forecast App",
+    "description": {
+      "en": "A weather application built with React that fetches real-time weather data from an external API. It allows users to search for weather forecasts by city name and view details such as temperature, humidity, wind speed, and weather conditions. The app includes a feature to toggle between Celsius and Fahrenheit.",
+      "tr": "React ile oluşturulmuş bir hava durumu uygulaması, dış bir API'den gerçek zamanlı hava durumu verilerini alır. Kullanıcılar şehir adıyla hava durumu tahminlerini arayabilir ve sıcaklık, nem, rüzgar hızı ve hava durumu gibi detayları görebilir. Uygulama, Santigrat ve Fahrenheit arasında geçiş yapma özelliğine sahiptir."
+    },
+    "image": "Weather-App.jpg",
+    "technologies": ["React", "API Integration", "CSS"],
+    "githubLink": "https://github.com/username/weather-app",
+    "viewLink": "https://weather-app.example.com/"
+  },
+  {
+    "title": "Task Management App",
+    "description": {
+      "en": "A task management app created using React. It allows users to create, edit, delete, and track their tasks. The app supports task categorization, deadline setting, and filtering by priority. It is built with state management using React Context and handles asynchronous actions through API calls.",
+      "tr": "React kullanarak oluşturulmuş bir görev yönetimi uygulaması. Kullanıcılar görev oluşturabilir, düzenleyebilir, silebilir ve takip edebilir. Uygulama, görev kategorileri, son tarih belirleme ve önceliğe göre filtreleme özelliklerine sahiptir. React Context kullanılarak durum yönetimi yapılmış ve API çağrıları ile eşzamanlı işlemler yönetilmiştir."
+    },
+    "image": "Task-Manager.jpg",
+    "technologies": ["React", "Context API", "Node.js", "Express"],
+    "githubLink": "https://github.com/username/task-manager",
+    "viewLink": "https://task-manager.example.com/"
   }
+  
+  
+  
 ]

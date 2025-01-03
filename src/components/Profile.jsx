@@ -45,7 +45,7 @@ const Profile = () => {
                     </div>
                 </div>
                 <div className={`flex flex-col justify-center px-6 lg:px-10 py-16 mt-20 lg:mt-0 mb-10 lg:mb-0 lg:col-span-2 rounded-xl lg:rounded-none ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
-                    <h1 className="font-semibold text-3xl lg:text-4xl text-blue-800 mb-6 ">{translations.aboutMe}</h1>
+                    <h1 className="font-semibold text-3xl lg:text-4xl text-blue-800 mb-10 ">{translations.aboutMe}</h1>
                     <p className="text-base lg:text-lg text-justify ">{translations.aboutMeTitle}</p>
                     <p className="text-base lg:text-lg  text-justify mt-6 lg:mt-8">{translations.aboutMeTitlei}</p>
                 </div>

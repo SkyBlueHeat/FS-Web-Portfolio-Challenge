@@ -65,7 +65,7 @@ const FeaturedProjects = () => {
       ],
       technologies: ['React', 'TypeScript', 'Remotion'],
       github: 'https://github.com/SkyBlueHeat/MotionKit',
-      live: null,
+      live: 'https://motion-kit-drab.vercel.app/',
       featured: true
     }
   ];

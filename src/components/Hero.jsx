@@ -1,222 +1,97 @@
-import React, { useContext, useState } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { LanguageContext } from '../context/LanguageContext';
-import { ThemeContext } from '../context/ThemeContext';
-import en from '../data/en.json';
-import tr from '../data/tr.json';
-
-const Header = ({ translations, theme, toggleMenu }) => (
-  <header className={`py-4 md:py-6 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
-    <div className="container px-4 mx-auto sm:px-6 lg:px-8">
-      <div className="flex items-center justify-between">
-        <div className="flex-shrink-0">
-          <div className={`flex items-center justify-center w-16 h-16 bg-blue-200 text-blue-800 font-bold text-2xl rounded-full ${theme === 'dark' ? 'bg-blue-800 text-white' : ''}`}>
-            <span className="transform rotate-12">B</span>
-          </div>
-        </div>
-
-        <div className="flex lg:hidden">
-          <button type="button" className={`text-gray-900 ${theme === 'dark' ? 'text-white' : ''}`} onClick={toggleMenu}>
-            <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-
-        <nav className={`hidden lg:flex lg:items-center lg:space-x-8 xl:space-x-10 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-          {['skills', 'projects', 'hireMe'].map((key) => (
-            <a
-              key={key}
-              href="#"
-              className={`text-base font-medium transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 ${key === 'hireMe' ? 'px-7 py-2 font-bold leading-7 rounded-lg' : ''} ${theme === 'dark' ? key === 'hireMe' ? 'text-blue-800 bg-gray-600 border-blue-800' : '' : key === 'hireMe' ? 'text-blue-800 bg-white border border-blue-800' : ''}`}
-            >
-              {translations[key]}
-            </a>
-          ))}
-        </nav>
-      </div>
-    </div>
-  </header>
-);
-
-const MobileMenu = ({ isMenuOpen, translations, theme }) => (
-  isMenuOpen && (
-    <div className={`flex gap-7 justify-end lg:hidden bg-slate-500 p-10 ${theme === 'dark' ? 'text-sky-500 bg-gray-800' : 'text-black'}`}>
-      {['skills', 'projects', 'hireMe'].map((key) => (
-        <a
-          key={key}
-          href="#"
-          className={`block text-base font-medium hover:text-opacity-50 ${theme === 'dark' ? 'text-sky-500' : 'text-black'}`}
-        >
-          {translations[key]}
-        </a>
-      ))}
-    </div>
-  )
-);
-
-const Modal = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState({});
-
-  const validate = () => {
-    const newErrors = {};
-    if (!formData.name) newErrors.name = 'Name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
-    if (!formData.message) newErrors.message = 'Message is required';
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-
-    fetch('http://localhost:5000/api/sendEmail', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    name: formData.name, 
-    email: formData.email,
-    message: formData.message,
-  }),
-})
-  .then(async (response) => {
-    const data = await response.json();
-    if (response.ok) { 
-      alert('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-      onClose();
-    } else {
-      alert(`Failed to send message: ${data.error}`);
-    }
-  })
-  .catch(() => alert('An error occurred while sending the message.'));
-
-  };
-
-  if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-slate-800 p-8 rounded-lg max-w-md w-full relative">
-        <h2 className="text-2xl font-bold mb-4">Hire Me</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label className="block text-sm font-medium  text-gray-100">Name</label>
-            <input
-              type="text"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="mt-1 p-2 w-full bg-slate-600 border rounded-md"
-              required
-            />
-            {errors.name && <p className="text-red-500">{errors.name}</p>}
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-100">Email</label>
-            <input
-              type="email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="mt-1 p-2 w-full bg-slate-600 border rounded-md"
-              required
-            />
-            {errors.email && <p className="text-red-500">{errors.email}</p>}
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-100">Message</label>
-            <textarea
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="mt-1 p-2 w-full border bg-slate-600 rounded-md"
-              rows="4"
-              required
-            ></textarea>
-            {errors.message && <p className="text-red-500">{errors.message}</p>}
-          </div>
-
-          <div className="flex justify-end gap-4">
-            <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-300 rounded-md">Cancel</button>
-            <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded-md">Send</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-};
-
-
-const HeroSection = ({ translations, theme }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  return (
-    <section className={`pt-12 pb-12 sm:pb-16 lg:pt-8 ${theme === 'dark' ? 'bg-gray-800' : ''}`}>
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex items-center">
-          <div className="h-0.5 bg-blue-800 w-32"></div>
-          <p className={`ml-4 text-blue-800 text-lg font-medium ${theme === 'dark' ? 'text-white' : ''}`}>Bora Aydın</p>
-        </div>
-        <div className="grid max-w-lg grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-16">
-          <div>
-            <div className="text-center lg:text-left">
-              <h1 className={`text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-pj ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                {translations.creative}
-              </h1>
-              <h2 className={`text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl font-pj mt-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                {translations.minimalism}
-              </h2>
-              <p className={`mt-4 text-lg sm:mt-8 font-inter ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
-                {translations.bora}
-              </p>
-              
-              <div className="mt-8 flex justify-center lg:justify-start gap-4">
-                <button onClick={openModal} className={`px-8 py-3 rounded-md text-lg font-medium ${theme === 'dark' ? 'bg-blue-600 text-white' : 'bg-blue-800 text-white'}`}>
-                  {translations.hireMe}
-                </button>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={`px-8 py-3 rounded-md text-lg font-medium flex items-center gap-2 ${theme === 'dark' ? 'bg-gray-700 text-white' : 'bg-gray-100 text-gray-900'}`}>
-                  <FaGithub /> GitHub
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={`px-8 py-3 rounded-md text-lg font-medium flex items-center gap-2 ${theme === 'dark' ? 'bg-blue-700 text-white' : 'bg-blue-200 text-blue-800'}`}>
-                  <FaLinkedin /> LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="w-full max-w-md mx-auto lg:max-w-lg rounded-3xl" src="/Hero-img.jpg" alt="Hero" />
-          </div>
-        </div>
-      </div>
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
-    </section>
-  );
-};
-
-
-
-
+import React from 'react';
+import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
-  const { language } = useContext(LanguageContext);
-  const { theme } = useContext(ThemeContext);
-  const translations = language === "en" ? en : tr;
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
-
   return (
-    <div className={`bg-white ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
-      <Header translations={translations} theme={theme} toggleMenu={toggleMenu} />
-      <MobileMenu isMenuOpen={isMenuOpen} translations={translations} theme={theme} />
-      <HeroSection translations={translations} theme={theme} />
-    </div>
+    <section className="bg-white min-h-screen flex items-center">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 py-20">
+        <div className="grid max-w-7xl grid-cols-1 mx-auto lg:max-w-full lg:items-center lg:grid-cols-2 gap-y-12 lg:gap-x-16">
+          <div>
+            <div className="mb-6">
+              <div className="flex items-center">
+                <div className="h-0.5 bg-blue-800 w-16"></div>
+                <p className="ml-4 text-blue-800 text-base font-medium tracking-wide uppercase">
+                  Bora Aydin
+                </p>
+              </div>
+            </div>
+            
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl sm:leading-tight lg:leading-tight lg:text-6xl text-gray-900 mb-6">
+              Frontend / Full-Stack Software Developer
+            </h1>
+            
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              Building reliable product experiences with React, TypeScript, APIs, automated testing, and performance in mind.
+            </p>
+            
+            <div className="mb-8">
+              <p className="text-base text-gray-500 mb-2">
+                Based in Ankara, Turkey · Open to U.S. relocation · J-1 Trainee Candidate
+              </p>
+              <p className="text-sm text-gray-400">
+                Professional software development experience + independent end-to-end product development
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <a 
+                href="#projects" 
+                className="px-8 py-3 bg-blue-800 text-white rounded-md text-lg font-medium hover:bg-blue-700 transition-colors text-center"
+              >
+                View Projects
+              </a>
+              <a 
+                href="#" 
+                className="px-8 py-3 bg-gray-100 text-gray-900 rounded-md text-lg font-medium hover:bg-gray-200 transition-colors text-center"
+              >
+                Download Resume
+              </a>
+            </div>
+            
+            <div className="flex gap-4">
+              <a 
+                href="https://github.com/SkyBlueHeat" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label="GitHub Profile"
+              >
+                <FaGithub size={24} />
+              </a>
+              <a 
+                href="https://linkedin.com/in/bora-aydn" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-600 hover:text-blue-600 transition-colors"
+                aria-label="LinkedIn Profile"
+              >
+                <FaLinkedin size={24} />
+              </a>
+            </div>
+          </div>
+          
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl transform rotate-3"></div>
+            <img 
+              className="relative w-full max-w-md mx-auto lg:max-w-lg rounded-3xl shadow-2xl" 
+              src="/Hero-img.jpg" 
+              alt="Bora Aydin - Software Developer" 
+            />
+          </div>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <a 
+            href="#projects" 
+            className="inline-flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+            aria-label="Scroll to projects"
+          >
+            <span className="mr-2 text-sm">View Projects</span>
+            <FaArrowDown className="animate-bounce" />
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 

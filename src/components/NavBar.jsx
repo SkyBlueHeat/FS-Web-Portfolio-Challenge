@@ -1,73 +1,114 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../context/ThemeContext';
-import { LanguageContext } from '../context/LanguageContext';
+import React, { useState } from 'react';
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-const ThemeToggle = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const navLinks = [
+    { name: 'Projects', href: '#projects' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Engineering', href: '#engineering' },
+    { name: 'Contact', href: '#contact' },
+  ];
 
   return (
-    <div className="flex items-center space-x-4">
-      <div className="relative inline-block w-12 h-6">
-        <input
-          type="checkbox"
-          id="toggle"
-          className="hidden"
-          checked={theme === 'dark'}
-          onChange={toggleTheme}
-        />
-        <label
-          htmlFor="toggle"
-          className={`block w-full h-full rounded-full cursor-pointer ${
-            theme === 'dark' ? 'bg-blue-800' : 'bg-blue-800'
-          }`}
-        ></label>
-        <span
-          className={`absolute top-1 left-1 w-4 h-4 rounded-full bg-yellow-400 transition-transform transform ${
-            theme === 'dark' ? 'translate-x-6' : 'translate-x-0'
-          }`}
-        ></span>
+    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex-shrink-0">
+            <a href="#" className="flex items-center">
+              <div className="flex items-center justify-center w-10 h-10 bg-blue-800 text-white font-bold text-xl rounded-lg">
+                <span className="transform rotate-12">B</span>
+              </div>
+              <span className="ml-3 text-xl font-bold text-gray-900">Bora Aydin</span>
+            </a>
+          </div>
+
+          <div className="hidden md:flex md:items-center md:space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+            <div className="flex items-center space-x-4 ml-4">
+              <a
+                href="https://github.com/SkyBlueHeat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+                aria-label="GitHub"
+              >
+                <FaGithub size={20} />
+              </a>
+              <a
+                href="https://linkedin.com/in/bora-aydn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-600 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={20} />
+              </a>
+            </div>
+          </div>
+
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-600 hover:text-gray-900 p-2"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            </button>
+          </div>
+        </div>
       </div>
-      <span className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'} font-medium`}>
-        {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
-      </span>
-    </div>
-  );
-};
 
-const LanguageToggle = () => {
-  const { language, toggleLanguage } = useContext(LanguageContext);
-
-  return (
-    <button
-      onClick={toggleLanguage}
-      className="font-medium hover:underline"
-    >
-      {language === 'tr' ? (
-        <>
-          <span className="text-blue-500">İNGİLİZCE'YE</span> GEÇ
-        </>
-      ) : (
-        <>
-          <span className="text-blue-500">Translate</span> to Turkish
-        </>
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <div className="flex items-center space-x-4 px-3 py-2">
+              <a
+                href="https://github.com/SkyBlueHeat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gray-600"
+                aria-label="GitHub"
+              >
+                <FaGithub size={20} />
+              </a>
+              <a
+                href="https://linkedin.com/in/bora-aydn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-600"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
       )}
-    </button>
+    </nav>
   );
 };
 
-const Header = () => {
-  const { theme } = useContext(ThemeContext);
-
-  return (
-    <header className={`p-4 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white'}`}>
-      <div className="container mx-auto flex justify-end items-center">
-        <ThemeToggle />
-        <span className={`${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'} mx-4`}>|</span>
-        <LanguageToggle />
-      </div>
-    </header>
-  );
-};
-
-export default Header;
+export default NavBar;

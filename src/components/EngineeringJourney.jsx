@@ -6,106 +6,400 @@ const EngineeringJourney = () => {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
 
+  const labels = {
+    en: {
+      continuedDevelopment: 'Continued Development',
+      independentPeriod: '2024–Present',
+      today: 'Today',
+    },
+    tr: {
+      continuedDevelopment: 'Sürekli Gelişim',
+      independentPeriod: '2024–Günümüz',
+      today: 'Bugün',
+    },
+    de: {
+      continuedDevelopment: 'Kontinuierliche Weiterentwicklung',
+      independentPeriod: '2024–Heute',
+      today: 'Heute',
+    },
+  };
+
+  const skillsByLanguage = {
+    en: {
+      professionalFrontend: [
+        'Frontend Development',
+        'HTML/CSS/JavaScript',
+        'Responsive Development',
+        'Reusable UI Patterns',
+        'Cross-Browser Problem Solving',
+        'QA Cycles',
+      ],
+
+      professionalFullStack: [
+        'Vue.js',
+        'Node.js REST Services',
+        'API Contracts',
+        'Backend Collaboration',
+        'Full-Stack Workflows',
+        'Production Interfaces',
+      ],
+
+      selfDevelopment: [
+        'Self-Directed Learning',
+        'Continuous Technical Improvement',
+        'Learning Through Building',
+        'Experimentation',
+        'Independent Problem Solving',
+        'Adapting to New Technologies',
+      ],
+
+      workintech: [
+        'React',
+        'TypeScript',
+        'JavaScript',
+        'REST APIs',
+        'Git/GitHub',
+        'Testing',
+        'Full-Stack Development',
+      ],
+
+      independent: [
+        'Product Ownership',
+        'Application Architecture',
+        'Backend/API Development',
+        'Testing & Performance',
+        'Docker',
+      ],
+
+      current: [
+        'React/TypeScript',
+        'Python/FastAPI',
+        'REST APIs',
+        'Testing',
+        'Performance',
+        'Docker',
+      ],
+    },
+
+    tr: {
+      professionalFrontend: [
+        'Frontend Geliştirme',
+        'HTML/CSS/JavaScript',
+        'Responsive Tasarım',
+        'Yeniden Kullanılabilir UI Yapıları',
+        'Tarayıcılar Arası Problem Çözme',
+        'QA Süreçleri',
+      ],
+
+      professionalFullStack: [
+        'Vue.js',
+        'Node.js REST Servisleri',
+        'API Sözleşmeleri',
+        'Backend İşbirliği',
+        'Full-Stack Süreçleri',
+        'Üretim Arayüzleri',
+      ],
+
+      selfDevelopment: [
+        'Kendi Kendine Öğrenme',
+        'Sürekli Teknik Gelişim',
+        'Yaparak Öğrenme',
+        'Deneyimleme',
+        'Bağımsız Problem Çözme',
+        'Yeni Teknolojilere Uyum',
+      ],
+
+      workintech: [
+        'React',
+        'TypeScript',
+        'JavaScript',
+        "REST API'ler",
+        'Git/GitHub',
+        'Test',
+        'Full-Stack Geliştirme',
+      ],
+
+      independent: [
+        'Ürün Sorumluluğu',
+        'Uygulama Mimarisi',
+        'Backend/API Geliştirme',
+        'Test & Performans',
+        'Docker',
+      ],
+
+      current: [
+        'React/TypeScript',
+        'Python/FastAPI',
+        "REST API'ler",
+        'Test',
+        'Performans',
+        'Docker',
+      ],
+    },
+
+    de: {
+      professionalFrontend: [
+        'Frontend-Entwicklung',
+        'HTML/CSS/JavaScript',
+        'Responsive Entwicklung',
+        'Wiederverwendbare UI-Strukturen',
+        'Browserübergreifende Problemlösung',
+        'QA-Prozesse',
+      ],
+
+      professionalFullStack: [
+        'Vue.js',
+        'Node.js-REST-Services',
+        'API-Verträge',
+        'Backend-Zusammenarbeit',
+        'Full-Stack-Workflows',
+        'Produktionsoberflächen',
+      ],
+
+      selfDevelopment: [
+        'Selbstständiges Lernen',
+        'Kontinuierliche technische Weiterentwicklung',
+        'Lernen durch praktische Entwicklung',
+        'Experimentieren',
+        'Eigenständige Problemlösung',
+        'Anpassung an neue Technologien',
+      ],
+
+      workintech: [
+        'React',
+        'TypeScript',
+        'JavaScript',
+        'REST-APIs',
+        'Git/GitHub',
+        'Testing',
+        'Full-Stack-Entwicklung',
+      ],
+
+      independent: [
+        'Produktverantwortung',
+        'Anwendungsarchitektur',
+        'Backend/API-Entwicklung',
+        'Testing & Performance',
+        'Docker',
+      ],
+
+      current: [
+        'React/TypeScript',
+        'Python/FastAPI',
+        'REST-APIs',
+        'Testing',
+        'Performance',
+        'Docker',
+      ],
+    },
+  };
+
+  const currentLabels = labels[language] || labels.en;
+  const skills = skillsByLanguage[language] || skillsByLanguage.en;
+
   const journeySteps = [
     {
+      id: 'foundation',
       year: '2017–2020',
       title: t.journey.formalFoundation,
       description: t.journey.formalFoundationText,
-      type: 'education'
+      type: 'education',
     },
+
     {
+      id: 'cers',
       year: '2021',
       title: t.journey.firstProfessional,
       description: t.journey.firstProfessionalText,
       type: 'professional',
-      skills: language === 'en' ? ['Frontend Development', 'HTML/CSS/JavaScript', 'Responsive Development', 'Reusable UI Patterns', 'Cross-browser Problem Solving', 'QA Cycles'] : language === 'tr' ? ['Frontend Geliştirme', 'HTML/CSS/JavaScript', 'Duyarlı Geliştirme', 'Yeniden Kullanılabilir UI Kalıpları', 'Çapraz Tarayıcı Problem Çözme', 'QA Döngüleri'] : ['Frontend-Entwicklung', 'HTML/CSS/JavaScript', 'Responsive Entwicklung', 'Wiederverwendbare UI-Muster', 'Cross-Browser-Problemlösung', 'QA-Zyklen']
+      skills: skills.professionalFrontend,
     },
+
     {
+      id: 'arma',
       year: '2022',
       title: t.journey.continuedGrowth,
       description: t.journey.continuedGrowthText,
       type: 'professional',
-      skills: language === 'en' ? ['Vue.js', 'Node.js REST Services', 'API Contracts', 'Backend Collaboration', 'Full-stack Workflows', 'Production Interfaces'] : language === 'tr' ? ['Vue.js', 'Node.js REST Servisleri', 'API Sözleşmeleri', 'Backend İşbirliği', 'Full-Stack Workflow\'lar', 'Üretim Arayüzleri'] : ['Vue.js', 'Node.js-REST-Services', 'API-Verträge', 'Backend-Zusammenarbeit', 'Full-Stack-Workflows', 'Produktionsschnittstellen']
+      skills: skills.professionalFullStack,
     },
+
     {
-      year: language === 'en' ? 'Continued Self-Development' : language === 'tr' ? 'Sonraki Yıllar' : 'Folgende Jahre',
+      id: 'self-development',
+      year: currentLabels.continuedDevelopment,
       title: t.journey.selfDevelopment,
       description: t.journey.selfDevelopmentText,
       type: 'self-learning',
-      skills: language === 'en' ? ['Self-directed Learning', 'Continuous Technical Improvement', 'Learning Through Building', 'Experimentation', 'Independent Problem Solving', 'Adapting to New Technologies'] : language === 'tr' ? ['Kendi Kendine Öğrenme', 'Sürekli Teknik İyileştirme', 'Yaparak Öğrenme', 'Deney', 'Bağımsız Problem Çözme', 'Yeni Teknolojilere Uyum'] : ['Selbstgesteuertes Lernen', 'Kontinuierliche Technische Verbesserung', 'Lernen durch Bauen', 'Experimentieren', 'Unabhängige Problemlösung', 'Anpassung an neue Technologien']
+      skills: skills.selfDevelopment,
     },
+
     {
+      id: 'workintech',
       year: '2024–2025',
       title: t.journey.modernExpansion,
       description: t.journey.modernExpansionText,
       type: 'training',
-      skills: language === 'en' ? ['React', 'TypeScript', 'JavaScript', 'REST APIs', 'Git/GitHub', 'Testing', 'Full-Stack Development'] : language === 'tr' ? ['React', 'TypeScript', 'JavaScript', 'REST API\'ler', 'Git/GitHub', 'Test', 'Full-Stack Geliştirme'] : ['React', 'TypeScript', 'JavaScript', 'REST-APIs', 'Git/GitHub', 'Testing', 'Full-Stack-Entwicklung']
+      skills: skills.workintech,
     },
+
     {
-      year: '2024–Today',
+      id: 'independent-engineering',
+      year: currentLabels.independentPeriod,
       title: t.journey.independentEngineering,
       description: t.journey.independentEngineeringText,
       type: 'independent',
-      skills: language === 'en' ? ['Product Ownership', 'Application Architecture', 'Backend/API Development', 'Testing & Performance', 'Docker'] : language === 'tr' ? ['Ürün Sahipliği', 'Uygulama Mimarisi', 'Backend/API Geliştirme', 'Test & Performans', 'Docker'] : ['Produkteigentum', 'Anwendungsarchitektur', 'Backend/API-Entwicklung', 'Testing & Leistung', 'Docker']
+      skills: skills.independent,
     },
+
     {
-      year: language === 'en' ? 'Today' : language === 'tr' ? 'Bugün' : 'Heute',
+      id: 'current-toolkit',
+      year: currentLabels.today,
       title: t.journey.currentToolkit,
       description: t.journey.currentToolkitText,
       type: 'current',
-      skills: language === 'en' ? ['React/TypeScript', 'Python/FastAPI', 'REST APIs', 'Testing', 'Performance', 'Docker'] : language === 'tr' ? ['React/TypeScript', 'Python/FastAPI', 'REST API\'ler', 'Test', 'Performans', 'Docker'] : ['React/TypeScript', 'Python/FastAPI', 'REST-APIs', 'Testing', 'Leistung', 'Docker']
-    }
+      skills: skills.current,
+    },
   ];
 
-  const getTypeColor = (type) => {
-    switch(type) {
-      case 'education': return 'bg-purple-100 dark:bg-purple-900/30 border-purple-500 dark:border-purple-400';
-      case 'professional': return 'bg-blue-100 dark:bg-blue-900/30 border-blue-500 dark:border-blue-400';
-      case 'self-learning': return 'bg-green-100 dark:bg-green-900/30 border-green-500 dark:border-green-400';
-      case 'training': return 'bg-orange-100 dark:bg-orange-900/30 border-orange-500 dark:border-orange-400';
-      case 'independent': return 'bg-pink-100 dark:bg-pink-900/30 border-pink-500 dark:border-pink-400';
-      case 'current': return 'bg-gray-100 dark:bg-gray-700 border-gray-800 dark:border-gray-600';
-      default: return 'bg-gray-100 dark:bg-gray-700 border-gray-500 dark:border-gray-400';
-    }
+  const typeStyles = {
+    education:
+      'bg-purple-50 dark:bg-purple-900/20 border-purple-500 dark:border-purple-400',
+
+    professional:
+      'bg-blue-50 dark:bg-blue-900/20 border-blue-500 dark:border-blue-400',
+
+    'self-learning':
+      'bg-green-50 dark:bg-green-900/20 border-green-500 dark:border-green-400',
+
+    training:
+      'bg-orange-50 dark:bg-orange-900/20 border-orange-500 dark:border-orange-400',
+
+    independent:
+      'bg-pink-50 dark:bg-pink-900/20 border-pink-500 dark:border-pink-400',
+
+    current:
+      'bg-gray-50 dark:bg-gray-800 border-gray-800 dark:border-gray-500',
   };
 
+  const getTypeStyle = (type) =>
+    typeStyles[type] ||
+    'bg-gray-50 dark:bg-gray-800 border-gray-500 dark:border-gray-400';
+
   return (
-    <section id="journey" className="bg-white dark:bg-gray-900 py-20">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t.journey.title}</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+    <section
+      id="journey"
+      className="bg-white py-16 dark:bg-gray-900 lg:py-20"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        {/* Section Header */}
+        <div className="mx-auto mb-12 max-w-3xl text-center lg:mb-16">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+            {t.journey.title}
+          </h2>
+
+          <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300 sm:text-xl">
             {t.journey.subtitle}
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        {/* Timeline */}
+        <div className="mx-auto max-w-5xl">
           <div className="relative">
+
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800 hidden md:block"></div>
+            <div
+              className="
+                absolute bottom-0 left-8 top-0
+                hidden w-0.5
+                bg-blue-200
+                dark:bg-blue-900
+                md:block
+              "
+              aria-hidden="true"
+            />
 
-            <div className="space-y-12">
-              {journeySteps.map((step, index) => (
-                <div key={index} className="relative pl-0 md:pl-20">
+            <div className="space-y-8 lg:space-y-10">
+              {journeySteps.map((step) => (
+                <article
+                  key={step.id}
+                  className="relative md:pl-20"
+                >
                   {/* Timeline Dot */}
-                  <div className="absolute left-6 top-0 w-4 h-4 rounded-full bg-blue-800 dark:bg-blue-400 border-4 border-white dark:border-gray-900 hidden md:block"></div>
+                  <div
+                    className="
+                      absolute left-[26px] top-7
+                      hidden h-3.5 w-3.5
+                      rounded-full
+                      border-4 border-white
+                      bg-blue-800
+                      dark:border-gray-900
+                      dark:bg-blue-400
+                      md:block
+                    "
+                    aria-hidden="true"
+                  />
 
-                  <div className={`rounded-2xl p-6 lg:p-8 border-l-4 ${getTypeColor(step.type)}`}>
+                  <div
+                    className={`
+                      rounded-2xl
+                      border border-gray-200
+                      border-l-4
+                      p-6
+                      shadow-sm
+                      dark:border-gray-700
+                      sm:p-7
+                      lg:p-8
+                      ${getTypeStyle(step.type)}
+                    `}
+                  >
+                    {/* Header */}
                     <div className="mb-4">
-                      <span className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                      <span
+                        className="
+                          text-xs font-semibold
+                          uppercase tracking-wider
+                          text-gray-500
+                          dark:text-gray-400
+                          sm:text-sm
+                        "
+                      >
                         {step.year}
                       </span>
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{step.title}</h3>
+
+                      <h3 className="mt-1 text-xl font-bold text-gray-900 dark:text-white sm:text-2xl">
+                        {step.title}
+                      </h3>
                     </div>
 
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{step.description}</p>
+                    {/* Description */}
+                    <p className="mb-6 leading-relaxed text-gray-600 dark:text-gray-300">
+                      {step.description}
+                    </p>
 
-                    {step.skills && (
+                    {/* Skills */}
+                    {step.skills?.length > 0 && (
                       <div>
-                        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">{t.journey.keyAreas}</h4>
+                        <h4 className="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
+                          {t.journey.keyAreas}
+                        </h4>
+
                         <div className="flex flex-wrap gap-2">
                           {step.skills.map((skill) => (
-                            <span key={skill} className="px-3 py-1 bg-white dark:bg-gray-600 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-500">
+                            <span
+                              key={skill}
+                              className="
+                                rounded-full
+                                border border-gray-200
+                                bg-white
+                                px-3 py-1.5
+                                text-sm font-medium
+                                text-gray-700
+                                dark:border-gray-600
+                                dark:bg-gray-700
+                                dark:text-gray-200
+                              "
+                            >
                               {skill}
                             </span>
                           ))}
@@ -113,16 +407,33 @@ const EngineeringJourney = () => {
                       </div>
                     )}
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-16 bg-blue-50 dark:bg-blue-900/30 rounded-2xl p-8 max-w-4xl mx-auto">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t.journey.howIGrew}</h3>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            {language === 'en' ? "My education gave me a foundation. Professional experience taught me how software is built in the real world. Self-directed learning helped me continue growing beyond formal education. Workintech strengthened and modernized my full-stack skills. Independent projects pushed me into deeper product, backend, testing, and performance work. I continue adapting as the software industry evolves." : language === 'tr' ? "Eğitimim bana bir temel verdi. Profesyonel deneyim yazılımın gerçek dünyada nasıl inşa edildiğini öğretti. Kendi kendine öğrenme, formal eğitimin ötesinde büyümeye devam etmeme yardımcı oldu. Workintech full-stack yeteneklerimi güçlendirdi ve modernize etti. Bağımsız projeler beni daha derin ürün, backend, test ve performans çalışmasına itti. Yazılım sektörü evrildikçe adapte olmaya devam ediyorum." : "Meine Ausbildung gab mir eine Grundlage. Professionelle Erfahrung lehrte mich, wie Software in der realen Welt gebaut wird. Selbstgesteuertes Lernen half mir, über die formale Ausbildung hinaus weiterzuwachsen. Workintech stärkte und modernisierte meine Full-Stack-Fähigkeiten. Unabhängige Projekte trieben mich in tiefere Produkt-, Backend-, Test- und Leistungsarbeit. Ich passe mich weiter an, während sich die Software-Landschaft entwickelt."}
+        {/* Growth Summary */}
+        <div
+          className="
+            mx-auto mt-12
+            max-w-4xl
+            rounded-2xl
+            border border-blue-100
+            bg-blue-50
+            p-6
+            dark:border-blue-900/50
+            dark:bg-blue-900/20
+            sm:p-8
+            lg:mt-16
+          "
+        >
+          <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
+            {t.journey.howIGrew}
+          </h3>
+
+          <p className="leading-relaxed text-gray-600 dark:text-gray-300">
+            {t.journey.howIGrewText}
           </p>
         </div>
       </div>

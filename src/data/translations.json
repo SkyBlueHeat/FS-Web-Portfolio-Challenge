@@ -4,8 +4,9 @@
       "name": "Bora Aydin",
       "title": "Frontend / Full-Stack Software Developer",
       "description": "Building reliable product experiences with React, TypeScript, APIs, automated testing, and performance in mind.",
-      "location": "Based in Ankara, Turkey · Open to U.S. relocation · J-1 Trainee Candidate",
-      "experience": "Professional software development experience + independent end-to-end product development",
+     "location": "Based in Ankara, Turkey · Open to U.S. relocation",
+"opportunities": "Open to full-time software development roles and J-1 Trainee opportunities",
+"experience": "Professional software development experience + independent end-to-end product development",
       "viewProjects": "View Projects",
       "downloadResume": "Download Resume"
     },
@@ -140,8 +141,9 @@
       "name": "Bora Aydin",
       "title": "Frontend / Full-Stack Yazılım Geliştirici",
       "description": "React, TypeScript, API'ler, otomatik test ve performans göz önünde bulundurarak güvenilir ürün deneyimleri geliştiriyorum.",
-      "location": "Ankara, Türkiye'de yaşıyorum · ABD'ye taşınmaya açığım · J-1 Staj Adayı",
-      "experience": "Profesyonel yazılım geliştirme deneyimi + bağımsız uçtan uca ürün geliştirme",
+     "location": "Ankara, Türkiye'de yaşıyorum · ABD'ye taşınmaya açığım",
+"opportunities": "Tam zamanlı yazılım geliştirme pozisyonlarına ve J-1 Trainee fırsatlarına açığım",
+"experience": "Profesyonel yazılım geliştirme deneyimi + bağımsız uçtan uca ürün geliştirme",
       "viewProjects": "Projeleri Gör",
       "downloadResume": "Özgeçmiş İndir"
     },
@@ -261,8 +263,8 @@
       "downloadResume": "Özgeçmiş İndir"
     },
     "footer": {
-      "letsConnect": "Birlikte Bağlantı Kuralım",
-      "letsConnectText": "Yazılım geliştirme fırsatları veya işbirliği hakkında tartışmakla ilgileniyor musunuz?",
+      "letsConnect": "İletişime Geçelim",
+      "letsConnectText": "Yazılım geliştirme fırsatları, projeler veya olası işbirlikleri hakkında iletişime geçebilirsiniz.",
       "quickLinks": "Hızlı Linkler",
       "connect": "Bağlan",
       "copyright": "React, TypeScript ve Tailwind CSS ile oluşturuldu."
@@ -273,8 +275,9 @@
       "name": "Bora Aydin",
       "title": "Frontend / Full-Stack Software-Entwickler",
       "description": "Zuverlässige Produkterfahrungen mit React, TypeScript, APIs, automatisiertem Testing und Leistung im Fokus entwickeln.",
-      "location": "Basierend in Ankara, Türkei · Offen für U.S. Umzug · J-1 Praktikant Kandidat",
-      "experience": "Professionelle Software-Entwicklungserfahrung + unabhängige End-to-End-Produktentwicklung",
+     "location": "Wohnhaft in Ankara, Türkei · Offen für einen Umzug in die USA",
+"opportunities": "Offen für Vollzeitstellen in der Softwareentwicklung und J-1-Trainee-Möglichkeiten",
+"experience": "Berufserfahrung in der Softwareentwicklung + eigenständige End-to-End-Produktentwicklung",
       "viewProjects": "Projekte Anzeigen",
       "downloadResume": "Lebenslauf Herunterladen"
     },
@@ -293,7 +296,9 @@
       "subtitle": "Formale Grundlagen, kontinuierliches Wachstum",
       "roleInJourney": "Rolle in Meiner Reise",
       "continuousLearning": "Kontinuierliches Lernen",
-      "continuousLearningText": "Meine formale Software-Entwicklungsgrundlage geht bis 2017 zurück, aber mein echtes Ingenieurwachstum setzte sich weit über die formale Ausbildung fort. Die Ufuk-Universität führte mich in die Grundlagen der Computerprogrammierung und Softwareentwicklung ein und gab mir eine frühe technische Basis, die ich durch professionelle Erfahrung, Selbststudium und spätere Ausbildung weiter ausbaute. Workintech wurde zu einer wichtigen Phase meines Wachstums und half mir, meine Entwicklungsfähigkeiten zu stärken und zu modernisieren, mein Verständnis von React, TypeScript, Full-Stack-Entwicklung, Testing, APIs und modernen Ingenieurworkflows zu vertiefen, basierend auf der professionellen Erfahrung und dem Selbststudium, das ich bereits entwickelt hatte."
+      "ufukRoleText": "Meine formale Grundlage in der Softwareentwicklung reicht bis ins Jahr 2017 zurück. Die Ufuk Universität vermittelte mir grundlegende Kenntnisse in Computerprogrammierung, Problemlösung, Softwareentwicklung, Web-Technologien und Datenbanken. Auf dieser technischen Basis habe ich später durch Berufserfahrung und selbstständiges Lernen weiter aufgebaut.",
+
+"workintechRoleText": "Workintech war eine wichtige Phase meiner Weiterentwicklung, nachdem ich bereits professionelle Erfahrung in der Softwareentwicklung gesammelt hatte. Das Programm half mir, meine Kenntnisse in React, TypeScript, Full-Stack-Entwicklung, Testing, APIs und modernen Entwicklungsprozessen weiter auszubauen und zu aktualisieren."
     },
     "journey": {
       "title": "Ingenieurreise",
@@ -388,7 +393,7 @@
       "downloadResume": "Lebenslauf Herunterladen"
     },
     "footer": {
-      "letsConnect": "Lass Uns Verbinden",
+      "letsConnect": "Kontakt aufnehmen",
       "letsConnectText": "Interessiert an der Diskussion von Software-Entwicklungsmöglichkeiten oder Zusammenarbeit?",
       "quickLinks": "Schnelle Links",
       "connect": "Verbinden",

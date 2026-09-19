@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FaGithub, FaLinkedin, FaArrowUp } from 'react-icons/fa';
+import { LanguageContext } from '../context/LanguageContext';
+import translations from '../data/translations.json';
 
 const Footer = () => {
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
   const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
 
   useEffect(() => {
@@ -30,9 +34,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
+            <h3 className="text-2xl font-bold mb-4">{t.footer.letsConnect}</h3>
             <p className="text-gray-400 mb-6">
-              Interested in discussing software development opportunities or collaboration?
+              {t.footer.letsConnectText}
             </p>
             <a 
               href="mailto:br.aydin@hotmail.com" 
@@ -45,37 +49,37 @@ const Footer = () => {
               download="Bora_Aydin_J1_Resume.pdf"
               className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors text-sm"
             >
-              Download Resume
+              {t.hero.downloadResume}
             </a>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
+            <h3 className="text-2xl font-bold mb-4">{t.footer.quickLinks}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#education" className="text-gray-400 hover:text-white transition-colors">
-                  Education
+                  {t.nav.education}
                 </a>
               </li>
               <li>
                 <a href="#journey" className="text-gray-400 hover:text-white transition-colors">
-                  Engineering Journey
+                  {t.nav.journey}
                 </a>
               </li>
               <li>
                 <a href="#experience" className="text-gray-400 hover:text-white transition-colors">
-                  Experience
+                  {t.nav.experience}
                 </a>
               </li>
               <li>
                 <a href="#projects" className="text-gray-400 hover:text-white transition-colors">
-                  Projects
+                  {t.nav.projects}
                 </a>
               </li>
               <li>
                 <a href="#modern-engineering" className="text-gray-400 hover:text-white transition-colors">
-                  Modern Engineering
+                  {t.nav.modern}
                 </a>
               </li>
             </ul>
@@ -83,7 +87,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Connect</h3>
+            <h3 className="text-2xl font-bold mb-4">{t.footer.connect}</h3>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/SkyBlueHeat"

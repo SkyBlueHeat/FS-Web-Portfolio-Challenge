@@ -70,18 +70,18 @@ const EngineeringCaseStudies = () => {
   ];
 
   return (
-    <section id="engineering" className="bg-white py-20">
+    <section id="engineering" className="bg-white dark:bg-gray-900 py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Engineering Case Studies</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Engineering Case Studies</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Deep dives into technical challenges, architectural decisions, and implementation details.
           </p>
         </div>
 
         <div className="space-y-16">
           {caseStudies.map((study, index) => (
-            <div key={index} className="bg-gray-50 rounded-2xl p-8 lg:p-12">
+            <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 lg:p-12">
               <div className="mb-6">
                 <h3 className="text-3xl font-bold text-gray-900 mb-2">{study.title}</h3>
                 <p className="text-lg text-blue-800 font-semibold">{study.subtitle}</p>

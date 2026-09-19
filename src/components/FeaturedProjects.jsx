@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { LanguageContext } from '../context/LanguageContext';
+import translations from '../data/translations.json';
 
 const FeaturedProjects = () => {
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
   const projects = [
     {
       id: 'aviora',
@@ -74,9 +78,9 @@ const FeaturedProjects = () => {
     <section id="projects" className="bg-gray-50 dark:bg-gray-800 py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t.projects.title}</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Selected engineering projects demonstrating full-stack development, testing, and performance optimization.
+            {t.projects.subtitle}
           </p>
         </div>
 

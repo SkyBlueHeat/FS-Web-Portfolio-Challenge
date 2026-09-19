@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../context/LanguageContext';
+import translations from '../data/translations.json';
 
 const ModernEngineering = () => {
-  const aiUseCases = [
+  const { language } = useContext(LanguageContext);
+  const t = translations[language];
+
+  const aiUseCases = language === 'en' ? [
     'Solution Exploration',
     'Implementation Assistance',
     'Code Generation',
@@ -16,9 +21,39 @@ const ModernEngineering = () => {
     'Documentation Assistance',
     'Exploring APIs and Frameworks',
     'Faster Experimentation'
+  ] : language === 'tr' ? [
+    'Çözüm Keşfi',
+    'Uygulama Yardımı',
+    'Kod Oluşturma',
+    'Hata Ayıklama',
+    'Refactoring',
+    'Hızlı Prototipleme',
+    'Yaklaşımları Karşılaştırma',
+    'Bilinmeyen Kodu Anlama',
+    'Boilerplate Azaltma',
+    'Iterasyon',
+    'Test Oluşturma Yardımı',
+    'Dokümantasyon Yardımı',
+    'API\'leri ve Framework\'leri Keşfetme',
+    'Daha Hızlı Deneme'
+  ] : [
+    'Lösungserkundung',
+    'Implementierungshilfe',
+    'Code-Generierung',
+    'Debugging',
+    'Refactoring',
+    'Schnelles Prototyping',
+    'Ansätze Vergleichen',
+    'Unbekannten Code Verstehen',
+    'Boilerplate-Reduktion',
+    'Iteration',
+    'Test-Generierungshilfe',
+    'Dokumentationshilfe',
+    'APIs und Frameworks Erkunden',
+    'Schnellere Experimentation'
   ];
 
-  const responsibilities = [
+  const responsibilities = language === 'en' ? [
     'Review generated code',
     'Understand what I ship',
     'Adapt generated code to project architecture',
@@ -29,18 +64,54 @@ const ModernEngineering = () => {
     'Make final implementation decisions',
     'Maintain code quality',
     'Retain responsibility for architecture and final output'
+  ] : language === 'tr' ? [
+    'Oluşturulan kodu inceleme',
+    'Gönderdiğimi anlama',
+    'Oluşturulan kodu proje mimarisine uyarlama',
+    'Davranışı doğrulama',
+    'Sorunları kendim hata ayıklama',
+    'Önemli yolları test etme',
+    'Takasları değerlendirme',
+    'Final uygulama kararlarını verme',
+    'Kod kalitesini koruma',
+    'Mimari ve final çıktı için sorumluluk koruma'
+  ] : [
+    'Generierten Code Überprüfen',
+    'Verstehen, was ich ausliefere',
+    'Generierten Code an Projektarchitektur anpassen',
+    'Verhalten verifizieren',
+    'Probleme selbst debuggen',
+    'Wichtige Pfade testen',
+    'Trade-offs bewerten',
+    'Endgültige Implementierungsentscheidungen treffen',
+    'Code-Qualität aufrechterhalten',
+    'Verantwortung für Architektur und endgültige Ausgabe behalten'
   ];
 
-  const adaptabilityFlow = [
+  const adaptabilityFlow = language === 'en' ? [
     { step: 'Learn', description: 'Understand new technology' },
     { step: 'Experiment', description: 'Build small prototypes' },
     { step: 'Evaluate', description: 'Assess trade-offs' },
     { step: 'Build', description: 'Integrate if useful' },
     { step: 'Validate', description: 'Test in real work' },
     { step: 'Improve', description: 'Iterate and refine' }
+  ] : language === 'tr' ? [
+    { step: 'Öğren', description: 'Yeni teknolojiyi anla' },
+    { step: 'Dene', description: 'Küçük prototipler oluştur' },
+    { step: 'Değerlendir', description: 'Takasları değerlendir' },
+    { step: 'İnşa Et', description: 'Yararlıysa entegre et' },
+    { step: 'Doğrula', description: 'Gerçek işte test et' },
+    { step: 'İyileştir', description: 'Iterasyon ve rafine et' }
+  ] : [
+    { step: 'Lernen', description: 'Neue Technologie verstehen' },
+    { step: 'Experimentieren', description: 'Kleine Prototypen bauen' },
+    { step: 'Bewerten', description: 'Trade-offs bewerten' },
+    { step: 'Bauen', description: 'Integrieren wenn nützlich' },
+    { step: 'Validieren', description: 'In echter Arbeit testen' },
+    { step: 'Verbessern', description: 'Iterieren und verfeinern' }
   ];
 
-  const techEvolution = [
+  const techEvolution = language === 'en' ? [
     'HTML / CSS / JavaScript',
     'Production Frontend Development',
     'React / TypeScript',
@@ -48,6 +119,22 @@ const ModernEngineering = () => {
     'Python / FastAPI / REST APIs',
     'Testing / Performance / Docker',
     'AI-Assisted Engineering with Cursor & Windsurf'
+  ] : language === 'tr' ? [
+    'HTML / CSS / JavaScript',
+    'Üretim Frontend Geliştirme',
+    'React / TypeScript',
+    'Full-Stack Geliştirme',
+    'Python / FastAPI / REST API\'ler',
+    'Test / Performans / Docker',
+    'Cursor & Windsurf ile AI Destekli Mühendislik'
+  ] : [
+    'HTML / CSS / JavaScript',
+    'Produktions-Frontend-Entwicklung',
+    'React / TypeScript',
+    'Full-Stack-Entwicklung',
+    'Python / FastAPI / REST-APIs',
+    'Testing / Leistung / Docker',
+    'KI-unterstützte Ingenieurwesen mit Cursor & Windsurf'
   ];
 
   const currentToolkit = {
@@ -59,41 +146,41 @@ const ModernEngineering = () => {
   };
 
   return (
-    <section id="modern-engineering" className="bg-gray-50 py-20">
+    <section id="modern-engineering" className="bg-gray-50 dark:bg-gray-800 py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Modern Engineering Workflow</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Adapting quickly, learning continuously, and using modern tools without giving up engineering ownership
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">{t.modern.title}</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            {t.modern.subtitle}
           </p>
         </div>
 
         {/* AI Philosophy Section */}
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-white rounded-2xl shadow-md p-8 lg:p-12">
+          <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-md p-8 lg:p-12">
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI-Assisted Engineering</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                I see AI as another major evolution in the software-development toolset. Used well, it can reduce repetitive work, accelerate exploration, and help engineers iterate faster. But speed without understanding creates technical debt. I use AI to accelerate my workflow while retaining responsibility for architecture, validation, testing, and the code I ship.
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{t.modern.aiPhilosophy}</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                {t.modern.aiPhilosophyText}
               </p>
               
-              <div className="bg-blue-800 text-white rounded-xl p-6 mb-6">
+              <div className="bg-blue-800 dark:bg-blue-900 text-white rounded-xl p-6 mb-6">
                 <p className="text-xl font-semibold text-center">
-                  AI accelerates the workflow. I retain engineering ownership.
+                  {t.modern.aiOwnership}
                 </p>
               </div>
 
-              <p className="text-gray-600 leading-relaxed">
-                AI helps me move faster during exploration, implementation, debugging, and iteration, while architecture, engineering judgment, validation, testing, and final code quality remain my responsibility.
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                {t.modern.aiPhilosophyText}
               </p>
             </div>
 
             {/* Tools */}
             <div className="mb-8">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Current Tools</h4>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t.modern.tools}</h4>
               <div className="flex flex-wrap gap-3">
                 {currentToolkit.ai.map((tool) => (
-                  <span key={tool} className="px-4 py-2 bg-blue-100 text-blue-800 rounded-lg font-semibold">
+                  <span key={tool} className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-lg font-semibold">
                     {tool}
                   </span>
                 ))}
@@ -103,24 +190,24 @@ const ModernEngineering = () => {
             {/* Use Cases */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">I Use AI For</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t.modern.iUseFor}</h4>
                 <ul className="space-y-2">
                   {aiUseCases.map((useCase) => (
                     <li key={useCase} className="flex items-start">
-                      <span className="text-blue-600 mr-2 mt-1">•</span>
-                      <span className="text-gray-600">{useCase}</span>
+                      <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
+                      <span className="text-gray-600 dark:text-gray-300">{useCase}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">I Retain Responsibility For</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t.modern.iRetain}</h4>
                 <ul className="space-y-2">
                   {responsibilities.map((resp) => (
                     <li key={resp} className="flex items-start">
-                      <span className="text-green-600 mr-2 mt-1">✓</span>
-                      <span className="text-gray-600">{resp}</span>
+                      <span className="text-green-600 dark:text-green-400 mr-2 mt-1">✓</span>
+                      <span className="text-gray-600 dark:text-gray-300">{resp}</span>
                     </li>
                   ))}
                 </ul>
@@ -128,10 +215,10 @@ const ModernEngineering = () => {
             </div>
 
             {/* Project Connection */}
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">AI in Real Projects</h4>
-              <p className="text-gray-600 mb-4">
-                For projects like Aviora, Cursor and Windsurf have been used during development for implementation assistance, debugging, solution exploration, and iteration. However, I review generated code, adapt it to the product architecture, and retain ownership of final implementation decisions.
+            <div className="bg-gray-50 dark:bg-gray-600 rounded-lg p-6">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t.modern.aiInProjects}</h4>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {t.modern.aiInProjectsText}
               </p>
             </div>
           </div>
@@ -139,36 +226,36 @@ const ModernEngineering = () => {
 
         {/* Adaptability Section */}
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-white rounded-2xl shadow-md p-8 lg:p-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Engineering Adaptability</h3>
+          <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-md p-8 lg:p-12">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t.modern.adaptability}</h3>
             
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Software development changes quickly. I try to stay effective by continuously learning, evaluating new technologies, understanding what problems they solve, and integrating them when they genuinely improve the development process. I don't adopt technology simply because it is new. I try to understand where it creates real value, where it improves productivity or quality, and where simpler or more traditional approaches remain the better choice.
+            <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              {t.modern.adaptabilityText}
             </p>
 
             {/* Adaptability Flow */}
             <div className="mb-8">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">How I Approach New Technologies</h4>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t.modern.howIApproach}</h4>
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 {adaptabilityFlow.map((item, index) => (
                   <React.Fragment key={item.step}>
                     <div className="flex-1 text-center">
-                      <div className="bg-blue-100 rounded-lg p-4 mb-2">
-                        <span className="text-blue-800 font-bold">{item.step}</span>
+                      <div className="bg-blue-100 dark:bg-blue-900 rounded-lg p-4 mb-2">
+                        <span className="text-blue-800 dark:text-blue-200 font-bold">{item.step}</span>
                       </div>
-                      <p className="text-sm text-gray-600">{item.description}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">{item.description}</p>
                     </div>
                     {index < adaptabilityFlow.length - 1 && (
-                      <div className="text-blue-400 text-2xl hidden md:block">→</div>
+                      <div className="text-blue-400 dark:text-blue-500 text-2xl hidden md:block">→</div>
                     )}
                   </React.Fragment>
                 ))}
               </div>
             </div>
 
-            <div className="bg-green-50 rounded-lg p-6">
-              <p className="text-gray-700 text-center font-medium">
-                Strong fundamentals make new tools easier to learn.
+            <div className="bg-green-50 dark:bg-green-900/30 rounded-lg p-6">
+              <p className="text-gray-700 dark:text-gray-200 text-center font-medium">
+                {t.modern.strongFundamentals}
               </p>
             </div>
           </div>
@@ -176,42 +263,42 @@ const ModernEngineering = () => {
 
         {/* Technology Evolution */}
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-white rounded-2xl shadow-md p-8 lg:p-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Technology Evolution</h3>
+          <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-md p-8 lg:p-12">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t.modern.techEvolution}</h3>
             
             <div className="space-y-4">
               {techEvolution.map((tech, index) => (
                 <div key={index} className="flex items-center">
-                  <div className="flex-shrink-0 w-8 h-8 bg-blue-800 text-white rounded-full flex items-center justify-center font-bold mr-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-blue-800 dark:bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-4">
                     {index + 1}
                   </div>
-                  <div className="flex-1 bg-gray-50 rounded-lg p-4">
-                    <span className="text-gray-900 font-medium">{tech}</span>
+                  <div className="flex-1 bg-gray-50 dark:bg-gray-600 rounded-lg p-4">
+                    <span className="text-gray-900 dark:text-white font-medium">{tech}</span>
                   </div>
                   {index < techEvolution.length - 1 && (
-                    <div className="ml-4 text-blue-400 text-2xl">↓</div>
+                    <div className="ml-4 text-blue-400 dark:text-blue-500 text-2xl">↓</div>
                   )}
                 </div>
               ))}
             </div>
 
-            <p className="text-gray-600 mt-6 text-sm italic">
-              My engineering toolkit expanded over time — older technologies were not replaced, but built upon.
+            <p className="text-gray-600 dark:text-gray-300 mt-6 text-sm italic">
+              {t.modern.techEvolutionNote}
             </p>
           </div>
         </div>
 
         {/* Current Toolkit */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-md p-8 lg:p-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Current Engineering Toolkit</h3>
+          <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-md p-8 lg:p-12">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{t.modern.currentToolkit}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Frontend</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t.modern.frontend}</h4>
                 <div className="flex flex-wrap gap-2">
                   {currentToolkit.frontend.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    <span key={tech} className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
                       {tech}
                     </span>
                   ))}
@@ -219,10 +306,10 @@ const ModernEngineering = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Backend / APIs</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t.modern.backend}</h4>
                 <div className="flex flex-wrap gap-2">
                   {currentToolkit.backend.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                    <span key={tech} className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">
                       {tech}
                     </span>
                   ))}
@@ -230,10 +317,10 @@ const ModernEngineering = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Testing / Quality</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t.modern.testing}</h4>
                 <div className="flex flex-wrap gap-2">
                   {currentToolkit.testing.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">
+                    <span key={tech} className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">
                       {tech}
                     </span>
                   ))}
@@ -241,10 +328,10 @@ const ModernEngineering = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">Infrastructure / Workflow</h4>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{t.modern.infrastructure}</h4>
                 <div className="flex flex-wrap gap-2">
                   {currentToolkit.infrastructure.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">
+                    <span key={tech} className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">
                       {tech}
                     </span>
                   ))}
@@ -252,8 +339,8 @@ const ModernEngineering = () => {
               </div>
             </div>
 
-            <div className="mt-6 text-sm text-gray-500 italic">
-              This represents breadth and adaptability, not expertise in every listed technology.
+            <div className="mt-6 text-sm text-gray-500 dark:text-gray-400 italic">
+              {t.modern.toolkitNote}
             </div>
           </div>
         </div>

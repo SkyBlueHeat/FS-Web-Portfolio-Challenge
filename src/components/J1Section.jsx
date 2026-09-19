@@ -3,7 +3,7 @@ import { FaEnvelope } from 'react-icons/fa';
 
 const J1Section = () => {
   return (
-    <section className="bg-blue-50 py-20">
+    <section className="bg-blue-50 dark:bg-blue-900/30 py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -13,7 +13,7 @@ const J1Section = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+          <div className="bg-white dark:bg-gray-700 rounded-2xl shadow-lg p-8 lg:p-12">
             <div className="space-y-6">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">J-1 Trainee Program Eligibility</h3>

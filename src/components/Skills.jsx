@@ -25,18 +25,18 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="bg-gray-50 py-20">
+    <section id="skills" className="bg-gray-50 dark:bg-gray-800 py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Technical Skills</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Technologies and tools I use to build reliable, scalable software products.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div key={index} className="bg-white dark:bg-gray-700 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">{category.category}</h3>
               <p className="text-gray-600 mb-4 text-sm">{category.description}</p>
               <div className="flex flex-wrap gap-2">

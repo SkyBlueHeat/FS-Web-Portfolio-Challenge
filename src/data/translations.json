@@ -1,0 +1,296 @@
+{
+  "en": {
+    "hero": {
+      "name": "Bora Aydin",
+      "title": "Frontend / Full-Stack Software Developer",
+      "description": "Building reliable product experiences with React, TypeScript, APIs, automated testing, and performance in mind.",
+      "location": "Based in Ankara, Turkey · Open to U.S. relocation · J-1 Trainee Candidate",
+      "experience": "Professional software development experience + independent end-to-end product development",
+      "viewProjects": "View Projects",
+      "downloadResume": "Download Resume"
+    },
+    "nav": {
+      "education": "Education",
+      "journey": "Journey",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "caseStudies": "Case Studies",
+      "modern": "Modern",
+      "contact": "Contact"
+    },
+    "education": {
+      "title": "Education & Training",
+      "subtitle": "Formal foundations, continuous growth",
+      "roleInJourney": "Role in My Journey",
+      "continuousLearning": "Continuous Learning",
+      "continuousLearningText": "My formal software-development foundation goes back to 2017, but my real engineering growth continued far beyond formal education. Ufuk University introduced me to the foundations of computer programming and software development, giving me an early technical base that I continued building on through professional experience, self-learning, and later training. Workintech became an important stage in my growth, helping me strengthen and modernize my development skills, deepen my understanding of React, TypeScript, full-stack development, testing, APIs, and modern engineering workflows, while building on the professional experience and self-learning I had already developed."
+    },
+    "journey": {
+      "title": "Engineering Journey",
+      "subtitle": "From foundation to product engineering",
+      "howIGrew": "How I Grew as a Developer",
+      "howIGrewText": "My education gave me a foundation. Professional experience taught me how software is built in the real world. Self-directed learning helped me continue growing beyond formal education. Workintech strengthened and modernized my full-stack skills. Independent projects pushed me into deeper product, backend, testing, and performance work. AI-assisted tools such as Cursor and Windsurf are the newest stage in a longer pattern of adapting to new technologies and improving how I work."
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "subtitle": "Professional software development experience building production applications.",
+      "responsibilities": "Key Responsibilities",
+      "technologies": "Technologies"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "Selected engineering projects demonstrating full-stack development, testing, and performance optimization.",
+      "problem": "Problem",
+      "solution": "Solution",
+      "contributions": "Engineering Contributions",
+      "metrics": "Performance Metrics",
+      "techStack": "Tech Stack",
+      "github": "GitHub",
+      "liveDemo": "Live Demo"
+    },
+    "skills": {
+      "title": "Technical Skills",
+      "subtitle": "Technologies and tools I use to build reliable, scalable software products.",
+      "approach": "Development Approach"
+    },
+    "caseStudies": {
+      "title": "Engineering Case Studies",
+      "subtitle": "Deep dives into technical challenges, architectural decisions, and implementation details."
+    },
+    "modern": {
+      "title": "Modern Engineering Workflow",
+      "subtitle": "Adapting quickly, learning continuously, and using modern tools without giving up engineering ownership",
+      "aiPhilosophy": "AI-Assisted Engineering",
+      "aiPhilosophyText": "I see AI as another major evolution in the software-development toolset. Used well, it can reduce repetitive work, accelerate exploration, and help engineers iterate faster. But speed without understanding creates technical debt. I use AI to accelerate my workflow while retaining responsibility for architecture, validation, testing, and the code I ship.",
+      "aiOwnership": "AI accelerates the workflow. I retain engineering ownership.",
+      "tools": "Current Tools",
+      "useFor": "I Use AI For",
+      "responsibility": "I Retain Responsibility For",
+      "aiInProjects": "AI in Real Projects",
+      "aiInProjectsText": "For projects like Aviora, Cursor and Windsurf have been used during development for implementation assistance, debugging, solution exploration, and iteration. However, I review generated code, adapt it to the product architecture, and retain ownership of final implementation decisions.",
+      "adaptability": "Engineering Adaptability",
+      "adaptabilityText": "Software development changes quickly. I try to stay effective by continuously learning, evaluating new technologies, understanding what problems they solve, and integrating them when they genuinely improve the development process. I don't adopt technology simply because it is new. I try to understand where it creates real value, where it improves productivity or quality, and where simpler or more traditional approaches remain the better choice.",
+      "howIApproach": "How I Approach New Technologies",
+      "strongFundamentals": "Strong fundamentals make new tools easier to learn.",
+      "techEvolution": "Technology Evolution",
+      "techEvolutionNote": "My engineering toolkit expanded over time — older technologies were not replaced, but built upon.",
+      "currentToolkit": "Current Engineering Toolkit",
+      "toolkitNote": "This represents breadth and adaptability, not expertise in every listed technology."
+    },
+    "j1": {
+      "title": "Open to U.S. Software Training Opportunities",
+      "subtitle": "Based in Turkey and open to relocating anywhere in the United States for a structured software development training opportunity.",
+      "eligibility": "J-1 Trainee Program Eligibility",
+      "eligibilityText": "My education and professional background have been reviewed by designated J-1 sponsor organizations and generally align with the J-1 Trainee category for software development professionals.",
+      "howItWorks": "How It Works",
+      "whatIBring": "What I Bring",
+      "contactMe": "Interested in discussing a J-1 training opportunity?",
+      "contactButton": "Contact me",
+      "downloadResume": "Download Resume"
+    },
+    "footer": {
+      "letsConnect": "Let's Connect",
+      "letsConnectText": "Interested in discussing software development opportunities or collaboration?",
+      "quickLinks": "Quick Links",
+      "connect": "Connect",
+      "copyright": "Built with React, TypeScript, and Tailwind CSS."
+    }
+  },
+  "tr": {
+    "hero": {
+      "name": "Bora Aydin",
+      "title": "Frontend / Full-Stack Yazılım Geliştirici",
+      "description": "React, TypeScript, API'ler, otomatik test ve performans göz önünde bulundurarak güvenilir ürün deneyimleri geliştiriyorum.",
+      "location": "Ankara, Türkiye'de yaşıyorum · ABD'ye taşınmaya açığım · J-1 Staj Adayı",
+      "experience": "Profesyonel yazılım geliştirme deneyimi + bağımsız uçtan uca ürün geliştirme",
+      "viewProjects": "Projeleri Gör",
+      "downloadResume": "Özgeçmiş İndir"
+    },
+    "nav": {
+      "education": "Eğitim",
+      "journey": "Yolculuk",
+      "experience": "Deneyim",
+      "projects": "Projeler",
+      "skills": "Yetenekler",
+      "caseStudies": "Vaka Çalışmaları",
+      "modern": "Modern",
+      "contact": "İletişim"
+    },
+    "education": {
+      "title": "Eğitim & Eğitim",
+      "subtitle": "Formal temeller, sürekli büyüme",
+      "roleInJourney": "Yolculuğumdaki Rol",
+      "continuousLearning": "Sürekli Öğrenme",
+      "continuousLearningText": "Formal yazılım geliştirme temelim 2017'ye kadar uzanıyor, ancak gerçek mühendislik büyümem formal eğitimin çok ötesine devam etti. Ufuk Üniversitesi beni bilgisayar programlama ve yazılım geliştirme temelleriyle tanıştırdı, profesyonel deneyim, kendini öğrenme ve sonraki eğitim üzerinden üzerine inşa ettiğim erken bir teknik taban verdi. Workintech büyümeme önemli bir aşama oldu, React, TypeScript, full-stack geliştirme, test, API'ler ve modern mühendislik workflow'ları hakkındaki anlayışımı derinleştirmeme ve güçlendirmeme yardımcı oldu, zaten geliştirdiğim profesyonel deneyim ve kendini öğrenme üzerine inşa ederek."
+    },
+    "journey": {
+      "title": "Mühendislik Yolculuğu",
+      "subtitle": "Temelden ürün mühendisliğine",
+      "howIGrew": "Bir Geliştirici Olarak Nasıl Büyüdüm",
+      "howIGrewText": "Eğitimim bana bir temel verdi. Profesyonel deneyim yazılımın gerçek dünyada nasıl inşa edildiğini öğretti. Kendi kendine öğrenme, formal eğitimin ötesinde büyümeye devam etmeme yardımcı oldu. Workintech full-stack yeteneklerimi güçlendirdi ve modernize etti. Bağımsız projeler beni daha derin ürün, backend, test ve performans çalışmasına itti. Cursor ve Windsurf gibi AI destekli araçlar, yeni teknolojilere uyum sağlama ve çalışma şeklimi iyileştirme uzun bir modelindeki en yeni aşama."
+    },
+    "experience": {
+      "title": "Profesyonel Deneyim",
+      "subtitle": "Üretim uygulamaları geliştirmede profesyonel yazılım geliştirme deneyimi.",
+      "responsibilities": "Ana Sorumluluklar",
+      "technologies": "Teknolojiler"
+    },
+    "projects": {
+      "title": "Öne Çıkan Projeler",
+      "subtitle": "Full-stack geliştirme, test ve performans optimizasyonunu gösteren seçilmiş mühendislik projeleri.",
+      "problem": "Problem",
+      "solution": "Çözüm",
+      "contributions": "Mühendislik Katkıları",
+      "metrics": "Performans Metrikleri",
+      "techStack": "Teknoloji Yığını",
+      "github": "GitHub",
+      "liveDemo": "Canlı Demo"
+    },
+    "skills": {
+      "title": "Teknik Yetenekler",
+      "subtitle": "Güvenilir, ölçeklenebilir yazılım ürünleri oluşturmak için kullandığım teknolojiler ve araçlar.",
+      "approach": "Geliştirme Yaklaşımı"
+    },
+    "caseStudies": {
+      "title": "Mühendislik Vaka Çalışmaları",
+      "subtitle": "Teknik zorluklara, mimari kararlarına ve uygulama detaylarına derinlemesine bakışlar."
+    },
+    "modern": {
+      "title": "Modern Mühendislik Workflow'u",
+      "subtitle": "Hızla uyum sağlama, sürekli öğrenme ve mühendislik sahipliğinden vazgeçmeden modern araçları kullanma",
+      "aiPhilosophy": "AI Destekli Mühendislik",
+      "aiPhilosophyText": "AI'ı yazılım geliştirme araç setindeki başka bir büyük evrim olarak görüyorum. İyi kullanıldığında, tekrarlayan işi azaltabilir, keşfi hızlandırabilir ve mühendislerin daha hızlı iterasyon yapmasına yardımcı olabilir. Ancak anlayış olmadan hız teknik borç yaratır. AI'ı workflow'umu hızlandırmak için kullanıyorum, ancak mimari, doğrulama, test ve gönderdiğim kodun sorumluluğunu koruyorum.",
+      "aiOwnership": "AI workflow'u hızlandırır. Mühendislik sahipliğini koruyorum.",
+      "tools": "Mevcut Araçlar",
+      "useFor": "AI'ı Şunlar İçin Kullanıyorum",
+      "responsibility": "Şunlar İçin Sorumluluk Koruyorum",
+      "aiInProjects": "Gerçek Projelerde AI",
+      "aiInProjectsText": "Aviora gibi projelerde, Cursor ve Windsurf geliştirme sırasında uygulama yardımı, hata ayıklama, çözüm keşfi ve iterasyon için kullanıldı. Ancak, oluşturulan kodu inceliyorum, ürün mimarisine uyum sağlıyorum ve final uygulama kararlarının sahipliğini koruyorum.",
+      "adaptability": "Mühendislik Uyumluluğu",
+      "adaptabilityText": "Yazılım geliştirme hızla değişiyor. Sürekli öğrenerek, yeni teknolojileri değerlendirerek, hangi sorunları çözdüklerini anlayarak ve gerçekten geliştirme sürecini iyileştirdiklerinde entegre ederek etkili kalmaya çalışıyorum. Teknolojiyi sadece yeni olduğu için benimsemiyorum. Gerçek değer nerede yarattığını, nerede verimliliği veya kaliteyi iyileştirdiğini ve nerede daha basit veya daha geleneksel yaklaşımların daha iyi seçenek kaldığını anlamaya çalışıyorum.",
+      "howIApproach": "Yeni Teknolojilere Nasıl Yaklaşıyorum",
+      "strongFundamentals": "Güçlü temeller yeni araçları öğrenmeyi kolaylaştırır.",
+      "techEvolution": "Teknoloji Evrimi",
+      "techEvolutionNote": "Mühendislik araç setim zamanla genişledi — eski teknolojiler değiştirilmedi, üzerine inşa edildi.",
+      "currentToolkit": "Mevcut Mühendislik Araç Seti",
+      "toolkitNote": "Bu genişliği ve uyumluluğu temsil eder, listelenen her teknolojide uzmanlığı değil."
+    },
+    "j1": {
+      "title": "ABD Yazılım Eğitim Fırsatlarına Açığım",
+      "subtitle": "Türkiye'de yaşıyorum ve yapılandırılmış bir yazılım geliştirme eğitim fırsatı için Amerika Birleşik Devletleri'nin her yerine taşınmaya açığım.",
+      "eligibility": "J-1 Staj Programı Uygunluğu",
+      "eligibilityText": "Eğitimim ve profesyonel geçmişim belirlenmiş J-1 sponsor kuruluşları tarafından incelendi ve genel olarak yazılım geliştirme profesyonelleri için J-1 Staj kategorisiyle uyumlu.",
+      "howItWorks": "Nasıl Çalışır",
+      "whatIBring": "Ne Getiriyorum",
+      "contactMe": "J-1 eğitim fırsatını tartışmakla ilgileniyor musunuz?",
+      "contactButton": "Benimle iletişime geçin",
+      "downloadResume": "Özgeçmiş İndir"
+    },
+    "footer": {
+      "letsConnect": "Birlikte Bağlantı Kuralım",
+      "letsConnectText": "Yazılım geliştirme fırsatları veya işbirliği hakkında tartışmakla ilgileniyor musunuz?",
+      "quickLinks": "Hızlı Linkler",
+      "connect": "Bağlan",
+      "copyright": "React, TypeScript ve Tailwind CSS ile oluşturuldu."
+    }
+  },
+  "de": {
+    "hero": {
+      "name": "Bora Aydin",
+      "title": "Frontend / Full-Stack Software-Entwickler",
+      "description": "Zuverlässige Produkterfahrungen mit React, TypeScript, APIs, automatisiertem Testing und Leistung im Fokus entwickeln.",
+      "location": "Basierend in Ankara, Türkei · Offen für U.S. Umzug · J-1 Praktikant Kandidat",
+      "experience": "Professionelle Software-Entwicklungserfahrung + unabhängige End-to-End-Produktentwicklung",
+      "viewProjects": "Projekte Anzeigen",
+      "downloadResume": "Lebenslauf Herunterladen"
+    },
+    "nav": {
+      "education": "Bildung",
+      "journey": "Reise",
+      "experience": "Erfahrung",
+      "projects": "Projekte",
+      "skills": "Fähigkeiten",
+      "caseStudies": "Fallstudien",
+      "modern": "Modern",
+      "contact": "Kontakt"
+    },
+    "education": {
+      "title": "Bildung & Ausbildung",
+      "subtitle": "Formale Grundlagen, kontinuierliches Wachstum",
+      "roleInJourney": "Rolle in Meiner Reise",
+      "continuousLearning": "Kontinuierliches Lernen",
+      "continuousLearningText": "Meine formale Software-Entwicklungsgrundlage geht bis 2017 zurück, aber mein echtes Ingenieurwachstum setzte sich weit über die formale Ausbildung fort. Die Ufuk-Universität führte mich in die Grundlagen der Computerprogrammierung und Softwareentwicklung ein und gab mir eine frühe technische Basis, die ich durch professionelle Erfahrung, Selbststudium und spätere Ausbildung weiter ausbaute. Workintech wurde zu einer wichtigen Phase meines Wachstums und half mir, meine Entwicklungsfähigkeiten zu stärken und zu modernisieren, mein Verständnis von React, TypeScript, Full-Stack-Entwicklung, Testing, APIs und modernen Ingenieurworkflows zu vertiefen, basierend auf der professionellen Erfahrung und dem Selbststudium, das ich bereits entwickelt hatte."
+    },
+    "journey": {
+      "title": "Ingenieurreise",
+      "subtitle": "Von Grundlage bis Produktingenieurwesen",
+      "howIGrew": "Wie Ich Als Entwickler Wuchs",
+      "howIGrewText": "Meine Ausbildung gab mir eine Grundlage. Professionelle Erfahrung lehrte mich, wie Software in der realen Welt gebaut wird. Selbstgesteuertes Lernen half mir, über die formale Ausbildung hinaus weiterzuwachsen. Workintech stärkte und modernisierte meine Full-Stack-Fähigkeiten. Unabhängige Projekte trieben mich in tiefere Produkt-, Backend-, Test- und Leistungsarbeit. KI-unterstützte Tools wie Cursor und Windsurf sind die neueste Phase in einem längeren Muster der Anpassung an neue Technologien und der Verbesserung meiner Arbeitsweise."
+    },
+    "experience": {
+      "title": "Professionelle Erfahrung",
+      "subtitle": "Professionelle Software-Entwicklungserfahrung beim Bau von Produktionsanwendungen.",
+      "responsibilities": "Hauptverantwortlichkeiten",
+      "technologies": "Technologien"
+    },
+    "projects": {
+      "title": "Ausgewählte Projekte",
+      "subtitle": "Ausgewählte Ingenieurprojekte, die Full-Stack-Entwicklung, Testing und Leistungsoptimierung demonstrieren.",
+      "problem": "Problem",
+      "solution": "Lösung",
+      "contributions": "Ingenieurbeiträge",
+      "metrics": "Leistungsmetriken",
+      "techStack": "Tech-Stack",
+      "github": "GitHub",
+      "liveDemo": "Live-Demo"
+    },
+    "skills": {
+      "title": "Technische Fähigkeiten",
+      "subtitle": "Technologien und Tools, die ich zum Bau zuverlässiger, skalierbarer Softwareprodukte verwende.",
+      "approach": "Entwicklungsansatz"
+    },
+    "caseStudies": {
+      "title": "Ingenieur-Fallstudien",
+      "subtitle": "Tiefe Einblicke in technische Herausforderungen, architektonische Entscheidungen und Implementierungsdetails."
+    },
+    "modern": {
+      "title": "Moderne Ingenieur-Workflow",
+      "subtitle": "Schnelle Anpassung, kontinuierliches Lernen und Verwendung moderner Tools ohne Aufgabe der Ingenieursverantwortung",
+      "aiPhilosophy": "KI-unterstützte Ingenieurwesen",
+      "aiPhilosophyText": "Ich sehe KI als weitere große Evolution im Software-Entwicklungs-Toolset. Richtig verwendet kann es repetitive Arbeit reduzieren, Erkundung beschleunigen und Ingenieuren helfen, schneller zu iterieren. Aber Geschwindigkeit ohne Verständnis schafft technische Schulden. Ich verwende KI, um meinen Workflow zu beschleunigen, behalte aber die Verantwortung für Architektur, Validierung, Testing und den Code, den ich ausliefere.",
+      "aiOwnership": "KI beschleunigt den Workflow. Ich behalte die Ingenieursverantwortung.",
+      "tools": "Aktuelle Tools",
+      "useFor": "Ich Verwende KI Für",
+      "responsibility": "Ich Behalte Verantwortung Für",
+      "aiInProjects": "KI in Echten Projekten",
+      "aiInProjectsText": "Für Projekte wie Aviora wurden Cursor und Windsurf während der Entwicklung für Implementierungshilfe, Debugging, Lösungserkundung und Iteration verwendet. Ich überprüfe jedoch generierten Code, passe ihn an die Produktarchitektur an und behalte die Eigentümerschaft der endgültigen Implementierungsentscheidungen.",
+      "adaptability": "Ingenieur-Anpassungsfähigkeit",
+      "adaptabilityText": "Software-Entwicklung ändert sich schnell. Ich versuche, effektiv zu bleiben, indem ich kontinuierlich lerne, neue Technologien bewerte, verstehe, welche Probleme sie lösen, und sie integriere, wenn sie den Entwicklungsprozess genuinely verbessern. Ich übernehme Technologie nicht einfach, weil sie neu ist. Ich versuche zu verstehen, wo sie echten Wert schafft, wo sie Produktivität oder Qualität verbessert und wo einfachere oder traditionellere Ansätze die bessere Wahl bleiben.",
+      "howIApproach": "Wie Ich Neue Technologien Angehe",
+      "strongFundamentals": "Starke Grundlagen machen neue Tools einfacher zu lernen.",
+      "techEvolution": "Technologie-Evolution",
+      "techEvolutionNote": "Mein Ingenieur-Toolset erweiterte sich im Laufe der Zeit — ältere Technologien wurden nicht ersetzt, sondern darauf aufgebaut.",
+      "currentToolkit": "Aktuelles Ingenieur-Toolset",
+      "toolkitNote": "Dies stellt Breite und Anpassungsfähigkeit dar, nicht Expertise in jeder aufgeführten Technologie."
+    },
+    "j1": {
+      "title": "Offen für U.S. Software-Trainingsmöglichkeiten",
+      "subtitle": "Basierend in der Türkei und offen für Umzug überall in den Vereinigten Staaten für ein strukturiertes Software-Entwicklungs-Trainingsprogramm.",
+      "eligibility": "J-1 Praktikant Programm Eignung",
+      "eligibilityText": "Meine Ausbildung und professionelle Hintergrund wurden von bezeichneten J-1-Sponsororganisationen überprüft und stimmen im Allgemeinen mit der J-1-Praktikantkategorie für Software-Entwicklungsprofis überein.",
+      "howItWorks": "Wie Es Funktioniert",
+      "whatIBring": "Was Ich Bringe",
+      "contactMe": "Interessiert an der Diskussion eines J-1-Trainingsprogramms?",
+      "contactButton": "Kontaktieren Sie mich",
+      "downloadResume": "Lebenslauf Herunterladen"
+    },
+    "footer": {
+      "letsConnect": "Lass Uns Verbinden",
+      "letsConnectText": "Interessiert an der Diskussion von Software-Entwicklungsmöglichkeiten oder Zusammenarbeit?",
+      "quickLinks": "Schnelle Links",
+      "connect": "Verbinden",
+      "copyright": "Gebaut mit React, TypeScript und Tailwind CSS."
+    }
+  }
+}

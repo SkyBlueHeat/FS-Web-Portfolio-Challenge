@@ -71,18 +71,18 @@ const FeaturedProjects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-gray-50 py-20">
+    <section id="projects" className="bg-gray-50 dark:bg-gray-800 py-20">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Selected engineering projects demonstrating full-stack development, testing, and performance optimization.
           </p>
         </div>
 
         <div className="space-y-24">
           {projects.map((project) => (
-            <div key={project.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div key={project.id} className="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden">
               <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 flex items-center justify-center min-h-[400px]">
                   <div className="text-center">

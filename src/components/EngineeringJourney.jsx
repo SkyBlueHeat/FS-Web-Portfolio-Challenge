@@ -46,14 +46,14 @@ const EngineeringJourney = () => {
       title: t.journey.independentEngineering,
       description: t.journey.independentEngineeringText,
       type: 'independent',
-      skills: language === 'en' ? ['Product Ownership', 'Application Architecture', 'Backend/API Development', 'Testing & Performance', 'Docker', 'AI-Assisted Development'] : language === 'tr' ? ['Ürün Sahipliği', 'Uygulama Mimarisi', 'Backend/API Geliştirme', 'Test & Performans', 'Docker', 'AI Destekli Geliştirme'] : ['Produkteigentum', 'Anwendungsarchitektur', 'Backend/API-Entwicklung', 'Testing & Leistung', 'Docker', 'KI-unterstützte Entwicklung']
+      skills: language === 'en' ? ['Product Ownership', 'Application Architecture', 'Backend/API Development', 'Testing & Performance', 'Docker'] : language === 'tr' ? ['Ürün Sahipliği', 'Uygulama Mimarisi', 'Backend/API Geliştirme', 'Test & Performans', 'Docker'] : ['Produkteigentum', 'Anwendungsarchitektur', 'Backend/API-Entwicklung', 'Testing & Leistung', 'Docker']
     },
     {
       year: language === 'en' ? 'Today' : language === 'tr' ? 'Bugün' : 'Heute',
       title: t.journey.currentToolkit,
       description: t.journey.currentToolkitText,
       type: 'current',
-      skills: language === 'en' ? ['React/TypeScript', 'Python/FastAPI', 'REST APIs', 'Testing', 'Performance', 'Docker', 'AI-Assisted Engineering'] : language === 'tr' ? ['React/TypeScript', 'Python/FastAPI', 'REST API\'ler', 'Test', 'Performans', 'Docker', 'AI Destekli Mühendislik'] : ['React/TypeScript', 'Python/FastAPI', 'REST-APIs', 'Testing', 'Leistung', 'Docker', 'KI-unterstützte Ingenieurwesen']
+      skills: language === 'en' ? ['React/TypeScript', 'Python/FastAPI', 'REST APIs', 'Testing', 'Performance', 'Docker'] : language === 'tr' ? ['React/TypeScript', 'Python/FastAPI', 'REST API\'ler', 'Test', 'Performans', 'Docker'] : ['React/TypeScript', 'Python/FastAPI', 'REST-APIs', 'Testing', 'Leistung', 'Docker']
     }
   ];
 
@@ -122,7 +122,7 @@ const EngineeringJourney = () => {
         <div className="mt-16 bg-blue-50 dark:bg-blue-900/30 rounded-2xl p-8 max-w-4xl mx-auto">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{t.journey.howIGrew}</h3>
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-            {t.journey.howIGrewText}
+            {language === 'en' ? "My education gave me a foundation. Professional experience taught me how software is built in the real world. Self-directed learning helped me continue growing beyond formal education. Workintech strengthened and modernized my full-stack skills. Independent projects pushed me into deeper product, backend, testing, and performance work. I continue adapting as the software industry evolves." : language === 'tr' ? "Eğitimim bana bir temel verdi. Profesyonel deneyim yazılımın gerçek dünyada nasıl inşa edildiğini öğretti. Kendi kendine öğrenme, formal eğitimin ötesinde büyümeye devam etmeme yardımcı oldu. Workintech full-stack yeteneklerimi güçlendirdi ve modernize etti. Bağımsız projeler beni daha derin ürün, backend, test ve performans çalışmasına itti. Yazılım sektörü evrildikçe adapte olmaya devam ediyorum." : "Meine Ausbildung gab mir eine Grundlage. Professionelle Erfahrung lehrte mich, wie Software in der realen Welt gebaut wird. Selbstgesteuertes Lernen half mir, über die formale Ausbildung hinaus weiterzuwachsen. Workintech stärkte und modernisierte meine Full-Stack-Fähigkeiten. Unabhängige Projekte trieben mich in tiefere Produkt-, Backend-, Test- und Leistungsarbeit. Ich passe mich weiter an, während sich die Software-Landschaft entwickelt."}
           </p>
         </div>
       </div>

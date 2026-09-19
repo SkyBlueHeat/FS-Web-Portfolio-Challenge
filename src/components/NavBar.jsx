@@ -19,7 +19,6 @@ const NavBar = () => {
     { name: t.nav.projects, href: '#projects' },
     { name: t.nav.skills, href: '#skills' },
     { name: t.nav.caseStudies, href: '#engineering' },
-    { name: t.nav.modern, href: '#modern-engineering' },
     { name: t.nav.contact, href: '#contact' },
   ];
 

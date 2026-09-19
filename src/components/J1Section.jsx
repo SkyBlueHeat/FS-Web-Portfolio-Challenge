@@ -303,7 +303,7 @@ Viele Grüße,`,
     <>
       <section
         id="j1"
-        className="bg-blue-50 py-16 dark:bg-blue-950/20 lg:py-20"
+        className="bg-blue-50 py-16 dark:bg-gray-900 lg:py-20"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">

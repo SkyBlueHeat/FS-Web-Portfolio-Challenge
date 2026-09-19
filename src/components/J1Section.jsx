@@ -90,16 +90,25 @@ const J1Section = () => {
               </div>
 
               <div className="bg-blue-100 rounded-lg p-6 mt-6">
-                <p className="text-gray-700 text-center text-lg">
-                  Interested in discussing a J-1 training opportunity?{' '}
-                  <a 
-                    href="mailto:br.aydin@hotmail.com" 
-                    className="text-blue-800 font-semibold hover:underline inline-flex items-center"
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <p className="text-gray-700 text-center text-lg">
+                    Interested in discussing a J-1 training opportunity?{' '}
+                    <a 
+                      href="mailto:br.aydin@hotmail.com" 
+                      className="text-blue-800 font-semibold hover:underline inline-flex items-center"
+                    >
+                      <FaEnvelope className="mr-2" />
+                      Contact me
+                    </a>
+                  </p>
+                  <a
+                    href="/Bora_Aydin_J1_Resume.pdf"
+                    download="Bora_Aydin_J1_Resume.pdf"
+                    className="px-6 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors text-center"
                   >
-                    <FaEnvelope className="mr-2" />
-                    Contact me
+                    Download Resume
                   </a>
-                </p>
+                </div>
               </div>
             </div>
           </div>

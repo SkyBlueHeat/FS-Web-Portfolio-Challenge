@@ -36,9 +36,16 @@ const Footer = () => {
             </p>
             <a 
               href="mailto:br.aydin@hotmail.com" 
-              className="text-blue-400 hover:text-blue-300 text-lg font-medium"
+              className="text-blue-400 hover:text-blue-300 text-lg font-medium block mb-4"
             >
               br.aydin@hotmail.com
+            </a>
+            <a
+              href="/Bora_Aydin_J1_Resume.pdf"
+              download="Bora_Aydin_J1_Resume.pdf"
+              className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors text-sm"
+            >
+              Download Resume
             </a>
           </div>
 

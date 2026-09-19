@@ -7,10 +7,13 @@ const NavBar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navLinks = [
-    { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
+    { name: 'Journey', href: '#journey' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Engineering', href: '#engineering' },
+    { name: 'Case Studies', href: '#engineering' },
+    { name: 'Modern', href: '#modern-engineering' },
     { name: 'Contact', href: '#contact' },
   ];
 

@@ -77,27 +77,6 @@ const Experience = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 bg-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Independent Product Development</h3>
-          <p className="text-gray-600 mb-4">
-            In addition to professional experience, I've independently designed and developed full-stack applications including:
-          </p>
-          <ul className="space-y-2 text-gray-600">
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Aviora</strong> — Career management platform with React, TypeScript, Python, and automated testing</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>Agent Evidence</strong> — AI payment security lab with FastAPI, React, and Docker</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2 mt-1">•</span>
-              <span><strong>MotionKit</strong> — Programmatic motion design system with React, TypeScript, and Remotion</span>
-            </li>
-          </ul>
-        </div>
       </div>
     </section>
   );

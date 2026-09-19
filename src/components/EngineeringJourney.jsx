@@ -28,7 +28,7 @@ const EngineeringJourney = () => {
       skills: language === 'en' ? ['Vue.js', 'Node.js REST Services', 'API Contracts', 'Backend Collaboration', 'Full-stack Workflows', 'Production Interfaces'] : language === 'tr' ? ['Vue.js', 'Node.js REST Servisleri', 'API Sözleşmeleri', 'Backend İşbirliği', 'Full-Stack Workflow\'lar', 'Üretim Arayüzleri'] : ['Vue.js', 'Node.js-REST-Services', 'API-Verträge', 'Backend-Zusammenarbeit', 'Full-Stack-Workflows', 'Produktionsschnittstellen']
     },
     {
-      year: language === 'en' ? 'Following Years' : language === 'tr' ? 'Sonraki Yıllar' : 'Folgende Jahre',
+      year: language === 'en' ? 'Continued Self-Development' : language === 'tr' ? 'Sonraki Yıllar' : 'Folgende Jahre',
       title: t.journey.selfDevelopment,
       description: t.journey.selfDevelopmentText,
       type: 'self-learning',

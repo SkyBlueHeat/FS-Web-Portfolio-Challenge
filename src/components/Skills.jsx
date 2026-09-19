@@ -14,7 +14,7 @@ const Skills = () => {
     {
       category: language === 'en' ? 'Backend & APIs' : language === 'tr' ? 'Backend & API\'ler' : 'Backend & APIs',
       skills: ['Python', 'FastAPI', 'Node.js', 'REST APIs', 'SQLAlchemy', 'Pydantic'],
-      description: language === 'en' ? 'Developing scalable backend services and API integrations with Python and Node.js.' : language === 'tr' ? 'Python ve Node.js ile ölçeklenebilir backend servisleri ve API entegrasyonları geliştirme.' : 'Entwicklung skalierbarer Backend-Services und API-Integrationen mit Python und Node.js.'
+      description: language === 'en' ? 'Building backend services with Python/FastAPI and integrating REST APIs, including Node.js-based services.' : language === 'tr' ? 'Python ve Node.js ile ölçeklenebilir backend servisleri ve API entegrasyonları geliştirme.' : 'Entwicklung skalierbarer Backend-Services und API-Integrationen mit Python und Node.js.'
     },
     {
       category: language === 'en' ? 'Testing & Quality' : language === 'tr' ? 'Test & Kalite' : 'Testing & Qualität',

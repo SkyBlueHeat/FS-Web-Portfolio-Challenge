@@ -37,7 +37,7 @@ const Education = () => {
         'Algorithmen',
         'Logisches Denken'
       ],
-      role: t.education.continuousLearningText
+      role: t.education.ufukRoleText
     },
     {
       institution: 'Workintech',
@@ -75,7 +75,7 @@ const Education = () => {
         'Komponentenbasierte Entwicklung',
         'API-gesteuerte Schnittstellen'
       ],
-      role: t.education.continuousLearningText
+      role: t.education.workintechRoleText
     }
   ];
 

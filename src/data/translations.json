@@ -20,12 +20,21 @@
       "contact": "Contact"
     },
     "education": {
-      "title": "Education & Training",
-      "subtitle": "Formal foundations, continuous growth",
-      "roleInJourney": "Role in My Journey",
-      "continuousLearning": "Continuous Learning",
-      "continuousLearningText": "My formal software-development foundation goes back to 2017, but my real engineering growth continued far beyond formal education. Ufuk University introduced me to the foundations of computer programming and software development, giving me an early technical base that I continued building on through professional experience, self-learning, and later training. Workintech became an important stage in my growth, helping me strengthen and modernize my development skills, deepen my understanding of React, TypeScript, full-stack development, testing, APIs, and modern engineering workflows, while building on the professional experience and self-learning I had already developed."
-    },
+  "title": "Education & Training",
+  "subtitle": "Formal foundations, continuous growth",
+  "roleInJourney": "Role in My Journey",
+
+  "ufukRoleText": "My formal software-development foundation goes back to 2017. Ufuk University introduced me to the fundamentals of computer programming, problem solving, software development, web technologies, and databases, giving me an early technical foundation that I later continued building on through professional experience and self-directed learning.",
+
+  "workintechRoleText": "Workintech became an important stage in my development after I had already gained professional software experience. It helped me strengthen and modernize my skills in React, TypeScript, full-stack development, testing, APIs, and modern engineering workflows, building on the experience and self-learning I had developed over the years.",
+
+  "continuousLearning": "Continuous Learning",
+
+  "continuousLearningText": "My growth as a developer has continued through professional experience, self-directed learning, structured training, and independent product development. I keep expanding my skills as technologies and software-development practices evolve."
+
+
+  
+},
     "journey": {
       "title": "Engineering Journey",
       "subtitle": "From foundation to product engineering",
@@ -44,7 +53,7 @@
       "independentEngineering": "Independent Product Engineering",
       "independentEngineeringText": "Independent products became one of the most important ways I continued growing, pushing me into deeper product, backend, testing, and performance work.",
       "currentToolkit": "Current Engineering Toolkit",
-      "currentToolkitText": "React / TypeScript + Python / FastAPI + REST APIs + Testing + Docker + Product Engineering + AI-Assisted Development",
+      "currentToolkitText": "React / TypeScript + Python / FastAPI + REST APIs + Testing + Docker + Product Engineering",
       "keyAreas": "Key Areas"
     },
     "experience": {
@@ -147,12 +156,18 @@
       "contact": "İletişim"
     },
     "education": {
-      "title": "Eğitim & Eğitim",
-      "subtitle": "Formal temeller, sürekli büyüme",
-      "roleInJourney": "Yolculuğumdaki Rol",
-      "continuousLearning": "Sürekli Öğrenme",
-      "continuousLearningText": "Formal yazılım geliştirme temelim 2017'ye kadar uzanıyor, ancak gerçek mühendislik büyümem formal eğitimin çok ötesine devam etti. Ufuk Üniversitesi beni bilgisayar programlama ve yazılım geliştirme temelleriyle tanıştırdı, profesyonel deneyim, kendini öğrenme ve sonraki eğitim üzerinden üzerine inşa ettiğim erken bir teknik taban verdi. Workintech büyümeme önemli bir aşama oldu, React, TypeScript, full-stack geliştirme, test, API'ler ve modern mühendislik workflow'ları hakkındaki anlayışımı derinleştirmeme ve güçlendirmeme yardımcı oldu, zaten geliştirdiğim profesyonel deneyim ve kendini öğrenme üzerine inşa ederek."
-    },
+  "title": "Eğitim & Mesleki Gelişim",
+  "subtitle": "Temelden sürekli gelişime",
+  "roleInJourney": "Yolculuğumdaki Rol",
+
+  "ufukRoleText": "Yazılım geliştirme alanındaki formal temelim 2017'ye kadar uzanıyor. Ufuk Üniversitesi bana bilgisayar programlama, problem çözme, yazılım geliştirme, web teknolojileri ve veritabanı konularında erken bir teknik temel kazandırdı. Daha sonra bu temeli profesyonel deneyim ve kendi kendine öğrenmeyle geliştirmeye devam ettim.",
+
+  "workintechRoleText": "Workintech, profesyonel yazılım deneyimi edindikten sonraki gelişim sürecimde önemli bir aşama oldu. React, TypeScript, full-stack geliştirme, test, API'ler ve modern mühendislik workflow'larındaki becerilerimi güçlendirmeme ve güncellememe yardımcı oldu.",
+
+  "continuousLearning": "Sürekli Öğrenme",
+
+  "continuousLearningText": "Bir geliştirici olarak gelişimim profesyonel deneyim, kendi kendine öğrenme, yapılandırılmış eğitim ve bağımsız ürün geliştirme yoluyla devam etti. Yazılım dünyası değiştikçe yeni teknolojileri ve geliştirme yaklaşımlarını öğrenmeye ve araç setimi genişletmeye devam ediyorum."
+},
     "journey": {
       "title": "Mühendislik Yolculuğu",
       "subtitle": "Temelden ürün mühendisliğine",

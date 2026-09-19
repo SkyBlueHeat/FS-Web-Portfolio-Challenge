@@ -83,44 +83,44 @@ const EngineeringCaseStudies = () => {
           {caseStudies.map((study, index) => (
             <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 lg:p-12">
               <div className="mb-6">
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">{study.title}</h3>
-                <p className="text-lg text-blue-800 font-semibold">{study.subtitle}</p>
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{study.title}</h3>
+                <p className="text-lg text-blue-800 dark:text-blue-400 font-semibold">{study.subtitle}</p>
               </div>
 
               <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Problem</h4>
-                <p className="text-gray-600">{study.problem}</p>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Problem</h4>
+                <p className="text-gray-600 dark:text-gray-300">{study.problem}</p>
               </div>
 
               <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Approach</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Approach</h4>
                 <ul className="space-y-2">
                   {study.approach.map((item, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="text-blue-600 mr-2 mt-1">•</span>
-                      <span className="text-gray-600">{item}</span>
+                      <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
+                      <span className="text-gray-600 dark:text-gray-300">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Results</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Results</h4>
                 <ul className="space-y-2">
                   {study.results.map((result, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="text-green-600 mr-2 mt-1">✓</span>
-                      <span className="text-gray-600">{result}</span>
+                      <span className="text-green-600 dark:text-green-400 mr-2 mt-1">✓</span>
+                      <span className="text-gray-600 dark:text-gray-300">{result}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Tools & Technologies</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Tools & Technologies</h4>
                 <div className="flex flex-wrap gap-2">
                   {study.tools.map((tool) => (
-                    <span key={tool} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                    <span key={tool} className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
                       {tool}
                     </span>
                   ))}

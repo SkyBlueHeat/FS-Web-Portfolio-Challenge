@@ -35,19 +35,19 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-bold mb-4">{t.footer.letsConnect}</h3>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 dark:text-gray-500 mb-6">
               {t.footer.letsConnectText}
             </p>
             <a 
               href="mailto:br.aydin@hotmail.com" 
-              className="text-blue-400 hover:text-blue-300 text-lg font-medium block mb-4"
+              className="text-blue-400 dark:text-blue-500 hover:text-blue-300 dark:hover:text-blue-400 text-lg font-medium block mb-4"
             >
               br.aydin@hotmail.com
             </a>
             <a
               href="/Bora_Aydin_J1_Resume.pdf"
               download="Bora_Aydin_J1_Resume.pdf"
-              className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors text-sm"
+              className="inline-block px-4 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-lg hover:bg-blue-500 dark:hover:bg-blue-600 transition-colors text-sm"
             >
               {t.hero.downloadResume}
             </a>
@@ -58,27 +58,27 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">{t.footer.quickLinks}</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#education" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#education" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors">
                   {t.nav.education}
                 </a>
               </li>
               <li>
-                <a href="#journey" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#journey" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors">
                   {t.nav.journey}
                 </a>
               </li>
               <li>
-                <a href="#experience" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#experience" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors">
                   {t.nav.experience}
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#projects" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors">
                   {t.nav.projects}
                 </a>
               </li>
               <li>
-                <a href="#modern-engineering" className="text-gray-400 hover:text-white transition-colors">
+                <a href="#modern-engineering" className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors">
                   {t.nav.modern}
                 </a>
               </li>
@@ -93,7 +93,7 @@ const Footer = () => {
                 href="https://github.com/SkyBlueHeat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors"
                 aria-label="GitHub"
               >
                 <FaGithub size={28} />
@@ -102,7 +102,7 @@ const Footer = () => {
                 href="https://linkedin.com/in/bora-aydn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-gray-400 dark:text-gray-500 hover:text-blue-400 dark:hover:text-blue-500 transition-colors"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={28} />
@@ -111,8 +111,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-gray-800 dark:border-gray-700 mt-12 pt-8 text-center">
+          <p className="text-gray-400 dark:text-gray-500">
             © {new Date().getFullYear()} Bora Aydin. Built with React, TypeScript, and Tailwind CSS.
           </p>
         </div>
@@ -122,7 +122,7 @@ const Footer = () => {
       {showScrollToTopButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transition-all"
+          className="fixed bottom-8 right-8 p-3 bg-blue-600 dark:bg-blue-700 text-white rounded-full shadow-lg hover:bg-blue-500 dark:hover:bg-blue-600 transition-all"
           aria-label="Scroll to top"
         >
           <FaArrowUp size={20} />

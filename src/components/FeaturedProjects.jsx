@@ -88,70 +88,70 @@ const FeaturedProjects = () => {
           {projects.map((project) => (
             <div key={project.id} className="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden">
               <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 flex items-center justify-center min-h-[400px]">
+                <div className="bg-gradient-to-br from-blue-50 dark:from-blue-900/20 to-blue-100 dark:to-blue-800/20 p-8 flex items-center justify-center min-h-[400px]">
                   <div className="text-center">
-                    <div className="inline-block p-6 bg-white rounded-xl shadow-md mb-4">
-                      <h3 className="text-2xl font-bold text-blue-800">{project.title.split('—')[0].trim()}</h3>
+                    <div className="inline-block p-6 bg-white dark:bg-gray-700 rounded-xl shadow-md mb-4">
+                      <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">{project.title.split('—')[0].trim()}</h3>
                     </div>
-                    <p className="text-gray-600 text-sm">{project.title.includes('—') ? project.title.split('—')[1].trim() : ''}</p>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">{project.title.includes('—') ? project.title.split('—')[1].trim() : ''}</p>
                   </div>
                 </div>
 
                 {/* Project Details */}
                 <div className="p-8 lg:p-12">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{project.title}</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{project.title}</h3>
                   
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Problem</h4>
-                    <p className="text-gray-600">{project.problem}</p>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Problem</h4>
+                    <p className="text-gray-600 dark:text-gray-300">{project.problem}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution</h4>
-                    <p className="text-gray-600">{project.solution}</p>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Solution</h4>
+                    <p className="text-gray-600 dark:text-gray-300">{project.solution}</p>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Engineering Contributions</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Engineering Contributions</h4>
                     <ul className="space-y-2">
                       {project.contributions.map((contribution, index) => (
                         <li key={index} className="flex items-start">
-                          <span className="text-blue-600 mr-2 mt-1">•</span>
-                          <span className="text-gray-600">{contribution}</span>
+                          <span className="text-blue-600 dark:text-blue-400 mr-2 mt-1">•</span>
+                          <span className="text-gray-600 dark:text-gray-300">{contribution}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {project.metrics && (
-                    <div className="mb-6 bg-blue-50 rounded-lg p-4">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-3">Performance Metrics</h4>
+                    <div className="mb-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg p-4">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Performance Metrics</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="flex items-center">
-                          <span className="text-blue-600 font-semibold mr-2">✓</span>
-                          <span className="text-gray-700 text-sm">{project.metrics.performance}</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-semibold mr-2">✓</span>
+                          <span className="text-gray-700 dark:text-gray-200 text-sm">{project.metrics.performance}</span>
                         </div>
                         <div className="flex items-center">
-                          <span className="text-blue-600 font-semibold mr-2">✓</span>
-                          <span className="text-gray-700 text-sm">{project.metrics.lcp}</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-semibold mr-2">✓</span>
+                          <span className="text-gray-700 dark:text-gray-200 text-sm">{project.metrics.lcp}</span>
                         </div>
                         <div className="flex items-center">
-                          <span className="text-blue-600 font-semibold mr-2">✓</span>
-                          <span className="text-gray-700 text-sm">{project.metrics.tbt}</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-semibold mr-2">✓</span>
+                          <span className="text-gray-700 dark:text-gray-200 text-sm">{project.metrics.tbt}</span>
                         </div>
                         <div className="flex items-center">
-                          <span className="text-blue-600 font-semibold mr-2">✓</span>
-                          <span className="text-gray-700 text-sm">{project.metrics.regions}</span>
+                          <span className="text-blue-600 dark:text-blue-400 font-semibold mr-2">✓</span>
+                          <span className="text-gray-700 dark:text-gray-200 text-sm">{project.metrics.regions}</span>
                         </div>
                       </div>
                     </div>
                   )}
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Tech Stack</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Tech Stack</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                        <span key={tech} className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
                           {tech}
                         </span>
                       ))}
@@ -163,7 +163,7 @@ const FeaturedProjects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                      className="inline-flex items-center px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
                     >
                       <FaGithub className="mr-2" />
                       GitHub
@@ -173,7 +173,7 @@ const FeaturedProjects = () => {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center px-6 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        className="inline-flex items-center px-6 py-3 bg-blue-800 dark:bg-blue-700 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
                       >
                         <FaExternalLinkAlt className="mr-2" />
                         Live Demo

@@ -1,7 +1,13 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext,
+  useState,
+} from 'react';
+
 import {
   FaGithub,
   FaExternalLinkAlt,
+  FaLink,
+  FaCheck,
 } from 'react-icons/fa';
 
 import { LanguageContext } from '../context/LanguageContext';
@@ -11,16 +17,22 @@ const FeaturedProjects = () => {
   const { language } = useContext(LanguageContext);
   const t = translations[language];
 
+  const [copiedProjectId, setCopiedProjectId] = useState(null);
+
   const labels = {
     en: {
       problem: 'Problem',
       solution: 'Solution',
       contributions: 'Engineering Contributions',
       highlights: 'Product Highlights',
+      ownership: 'Project Ownership',
       metrics: 'Performance Metrics',
       techStack: 'Tech Stack',
       liveDemo: 'Live Demo',
       github: 'View GitHub',
+      copyLink: 'Copy Project Link',
+      copied: 'Link Copied',
+      copyFallback: 'Copy this project link:',
     },
 
     tr: {
@@ -28,10 +40,14 @@ const FeaturedProjects = () => {
       solution: 'Çözüm',
       contributions: 'Mühendislik Katkıları',
       highlights: 'Ürün Özellikleri',
+      ownership: 'Projedeki Sorumluluklarım',
       metrics: 'Performans Metrikleri',
       techStack: 'Teknoloji Yığını',
       liveDemo: 'Canlı Demo',
       github: "GitHub'ı Gör",
+      copyLink: 'Proje Linkini Kopyala',
+      copied: 'Link Kopyalandı',
+      copyFallback: 'Bu proje linkini kopyalayın:',
     },
 
     de: {
@@ -39,10 +55,14 @@ const FeaturedProjects = () => {
       solution: 'Lösung',
       contributions: 'Technische Beiträge',
       highlights: 'Produkt-Highlights',
+      ownership: 'Projektverantwortung',
       metrics: 'Performance-Metriken',
       techStack: 'Technologie-Stack',
       liveDemo: 'Live-Demo',
       github: 'GitHub ansehen',
+      copyLink: 'Projektlink kopieren',
+      copied: 'Link kopiert',
+      copyFallback: 'Diesen Projektlink kopieren:',
     },
   };
 
@@ -62,6 +82,14 @@ const FeaturedProjects = () => {
 
         solution:
           'Built a comprehensive career management platform with application tracking, Kanban workflows, analytics, and interview preparation tools.',
+
+        ownership: [
+          'Product architecture',
+          'Frontend development',
+          'Python utilities',
+          'Testing strategy',
+          'Performance optimization',
+        ],
 
         contributions: [
           'Designed and developed the product independently as a full-stack application',
@@ -106,6 +134,15 @@ const FeaturedProjects = () => {
 
         solution:
           'Built a payment-security testing platform with deterministic risk rules, structured domain modeling, validation, and security-conscious API workflows.',
+
+        ownership: [
+          'API architecture',
+          'Backend development',
+          'Domain modeling',
+          'Risk-rule implementation',
+          'Testing and validation',
+          'Docker environment',
+        ],
 
         highlights: [
           '6 core domain entities',
@@ -158,6 +195,14 @@ const FeaturedProjects = () => {
         solution:
           'Built a component-driven motion design system with typed APIs, centralized motion tokens, reusable transitions, responsive formats, themes, and deterministic frame-based rendering.',
 
+        ownership: [
+          'Component architecture',
+          'Typed API design',
+          'Motion system design',
+          'Responsive formats',
+          'Rendering workflow',
+        ],
+
         highlights: [
           'Reusable typed motion components',
           'Kinetic typography and animated titles',
@@ -209,6 +254,14 @@ const FeaturedProjects = () => {
         solution:
           'Başvuru takibi, Kanban workflow’ları, analizler ve mülakat hazırlık araçlarını içeren kapsamlı bir kariyer yönetim platformu geliştirdim.',
 
+        ownership: [
+          'Ürün mimarisi',
+          'Frontend geliştirme',
+          'Python araçları',
+          'Test stratejisi',
+          'Performans optimizasyonu',
+        ],
+
         contributions: [
           'Ürünü bağımsız olarak full-stack bir uygulama şeklinde tasarlayıp geliştirdim',
           'React ve TypeScript ile yeniden kullanılabilir UI mimarisi oluşturdum',
@@ -252,6 +305,15 @@ const FeaturedProjects = () => {
 
         solution:
           'Deterministik risk kuralları, domain modelleme, doğrulama ve güvenlik odaklı API workflow’ları içeren bir ödeme güvenliği test platformu geliştirdim.',
+
+        ownership: [
+          'API mimarisi',
+          'Backend geliştirme',
+          'Domain modelleme',
+          'Risk kurallarının geliştirilmesi',
+          'Test ve doğrulama',
+          'Docker ortamı',
+        ],
 
         highlights: [
           '6 temel domain entity',
@@ -304,6 +366,14 @@ const FeaturedProjects = () => {
         solution:
           'Typed API’ler, merkezi motion token’ları, yeniden kullanılabilir geçişler, responsive formatlar, temalar ve deterministik frame tabanlı rendering içeren bileşen tabanlı bir motion design sistemi geliştirdim.',
 
+        ownership: [
+          'Bileşen mimarisi',
+          'Typed API tasarımı',
+          'Motion sistem tasarımı',
+          'Responsive formatlar',
+          'Rendering workflow’u',
+        ],
+
         highlights: [
           'Yeniden kullanılabilir tip güvenli motion bileşenleri',
           'Kinetic typography ve animasyonlu başlıklar',
@@ -355,6 +425,14 @@ const FeaturedProjects = () => {
         solution:
           'Entwicklung einer umfassenden Karriere-Management-Plattform mit Bewerbungstracking, Kanban-Workflows, Analysen und Werkzeugen zur Interviewvorbereitung.',
 
+        ownership: [
+          'Produktarchitektur',
+          'Frontend-Entwicklung',
+          'Python-Werkzeuge',
+          'Teststrategie',
+          'Performance-Optimierung',
+        ],
+
         contributions: [
           'Das Produkt eigenständig als Full-Stack-Anwendung konzipiert und entwickelt',
           'Wiederverwendbare UI-Architektur mit React und TypeScript entwickelt',
@@ -398,6 +476,15 @@ const FeaturedProjects = () => {
 
         solution:
           'Entwicklung einer Payment-Security-Testplattform mit deterministischen Risikoregeln, Domänenmodellierung, Validierung und sicherheitsorientierten API-Workflows.',
+
+        ownership: [
+          'API-Architektur',
+          'Backend-Entwicklung',
+          'Domänenmodellierung',
+          'Implementierung der Risikoregeln',
+          'Testing und Validierung',
+          'Docker-Umgebung',
+        ],
 
         highlights: [
           '6 zentrale Domänenentitäten',
@@ -450,6 +537,14 @@ const FeaturedProjects = () => {
         solution:
           'Entwicklung eines komponentenbasierten Motion-Design-Systems mit typisierten APIs, zentralen Motion-Tokens, wiederverwendbaren Übergängen, responsiven Formaten, Themes und deterministischem framebasiertem Rendering.',
 
+        ownership: [
+          'Komponentenarchitektur',
+          'Design typisierter APIs',
+          'Motion-System',
+          'Responsive Formate',
+          'Rendering-Workflow',
+        ],
+
         highlights: [
           'Wiederverwendbare typsichere Motion-Komponenten',
           'Kinetic Typography und animierte Titel',
@@ -489,6 +584,27 @@ const FeaturedProjects = () => {
   const projects = projectsData[language] || projectsData.en;
   const currentLabels = labels[language] || labels.en;
 
+  const copyProjectLink = async (projectId) => {
+    const projectUrl = `${window.location.origin}${window.location.pathname}#${projectId}`;
+
+    try {
+      await navigator.clipboard.writeText(projectUrl);
+
+      setCopiedProjectId(projectId);
+
+      window.setTimeout(() => {
+        setCopiedProjectId((currentId) =>
+          currentId === projectId ? null : currentId
+        );
+      }, 2000);
+    } catch (error) {
+      window.prompt(
+        currentLabels.copyFallback,
+        projectUrl
+      );
+    }
+  };
+
   return (
     <section
       id="projects"
@@ -509,284 +625,356 @@ const FeaturedProjects = () => {
 
         {/* Projects */}
         <div className="space-y-12 lg:space-y-16">
-          {projects.map((project) => (
-            <article
-              key={project.id}
-              className="
-                overflow-hidden
-                rounded-2xl
-                border border-gray-200
-                bg-white
-                shadow-sm
-                dark:border-gray-700
-                dark:bg-gray-700
-              "
-            >
-              <div className="lg:grid lg:grid-cols-[0.8fr_1.2fr]">
+          {projects.map((project) => {
+            const isCopied = copiedProjectId === project.id;
 
-                {/* Project Overview */}
-                <div
-                  className="
-                    flex
-                    min-h-[280px]
-                    items-center
-                    justify-center
-                    bg-gradient-to-br
-                    from-blue-50
-                    to-blue-100
-                    p-8
-                    dark:from-blue-950/30
-                    dark:to-blue-900/20
-                    lg:min-h-full
-                  "
-                >
-                  <div className="max-w-sm text-center">
+            return (
+              <article
+                key={project.id}
+                id={project.id}
+                className="
+                  scroll-mt-24
+                  overflow-hidden
+                  rounded-2xl
+                  border border-gray-200
+                  bg-white
+                  shadow-sm
+                  dark:border-gray-700
+                  dark:bg-gray-700
+                "
+              >
+                <div className="lg:grid lg:grid-cols-[0.8fr_1.2fr]">
+
+                  {/* Project Overview */}
+                  <div
+                    className="
+                      flex
+                      min-h-[280px]
+                      items-center
+                      justify-center
+                      bg-gradient-to-br
+                      from-blue-50
+                      to-blue-100
+                      p-8
+                      dark:from-blue-950/30
+                      dark:to-blue-900/20
+                      lg:min-h-full
+                    "
+                  >
+                    <div className="max-w-sm text-center">
+
+                      <div
+                        className="
+                          mb-5
+                          inline-flex
+                          rounded-xl
+                          border border-blue-100
+                          bg-white
+                          px-6 py-4
+                          shadow-sm
+                          dark:border-gray-600
+                          dark:bg-gray-700
+                        "
+                      >
+                        <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">
+                          {project.name}
+                        </h3>
+                      </div>
+
+                      <p className="mb-4 font-medium text-gray-700 dark:text-gray-200">
+                        {project.category}
+                      </p>
+
+                      <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Project Details */}
+                  <div className="p-6 sm:p-8 lg:p-10">
+
+                    {/* Title + Share */}
                     <div
                       className="
-                        mb-5
-                        inline-flex
-                        rounded-xl
-                        border border-blue-100
-                        bg-white
-                        px-6 py-4
-                        shadow-sm
-                        dark:border-gray-600
-                        dark:bg-gray-700
+                        mb-6
+                        flex
+                        flex-col
+                        gap-4
+                        sm:flex-row
+                        sm:items-start
+                        sm:justify-between
                       "
                     >
-                      <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">
-                        {project.name}
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+                        {project.title}
                       </h3>
+
+                     
                     </div>
 
-                    <p className="mb-4 font-medium text-gray-700 dark:text-gray-200">
-                      {project.category}
-                    </p>
+                    {/* Problem */}
+                    <div className="mb-6">
+                      <h4 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                        {currentLabels.problem}
+                      </h4>
 
-                    <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
+                      <p className="leading-relaxed text-gray-600 dark:text-gray-300">
+                        {project.problem}
+                      </p>
+                    </div>
 
-                {/* Project Details */}
-                <div className="p-6 sm:p-8 lg:p-10">
-                  <h3 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
-                    {project.title}
-                  </h3>
+                    {/* Solution */}
+                    <div className="mb-7">
+                      <h4 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
+                        {currentLabels.solution}
+                      </h4>
 
-                  {/* Problem */}
-                  <div className="mb-6">
-                    <h4 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                      {currentLabels.problem}
-                    </h4>
+                      <p className="leading-relaxed text-gray-600 dark:text-gray-300">
+                        {project.solution}
+                      </p>
+                    </div>
 
-                    <p className="leading-relaxed text-gray-600 dark:text-gray-300">
-                      {project.problem}
-                    </p>
-                  </div>
+                    {/* Project Ownership */}
+                    {project.ownership?.length > 0 && (
+                      <div
+                        className="
+                          mb-7
+                          rounded-xl
+                          border border-gray-200
+                          bg-gray-50
+                          p-5
+                          dark:border-gray-600
+                          dark:bg-gray-800/60
+                        "
+                      >
+                        <h4 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                          {currentLabels.ownership}
+                        </h4>
 
-                  {/* Solution */}
-                  <div className="mb-6">
-                    <h4 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                      {currentLabels.solution}
-                    </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.ownership.map((item) => (
+                            <span
+                              key={item}
+                              className="
+                                rounded-full
+                                border border-gray-200
+                                bg-white
+                                px-3 py-1.5
+                                text-sm font-medium
+                                text-gray-700
+                                dark:border-gray-600
+                                dark:bg-gray-700
+                                dark:text-gray-200
+                              "
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
-                    <p className="leading-relaxed text-gray-600 dark:text-gray-300">
-                      {project.solution}
-                    </p>
-                  </div>
+                    {/* Highlights */}
+                    {project.highlights?.length > 0 && (
+                      <div className="mb-7">
+                        <h4 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
+                          {currentLabels.highlights}
+                        </h4>
 
-                  {/* Highlights */}
-                  {project.highlights?.length > 0 && (
+                        <div className="grid gap-2 sm:grid-cols-2">
+                          {project.highlights.map((highlight) => (
+                            <div
+                              key={highlight}
+                              className="
+                                flex
+                                items-start
+                                gap-2
+                                rounded-lg
+                                bg-gray-50
+                                px-3
+                                py-2.5
+                                dark:bg-gray-800/70
+                              "
+                            >
+                              <span
+                                className="mt-0.5 text-blue-600 dark:text-blue-400"
+                                aria-hidden="true"
+                              >
+                                ✓
+                              </span>
+
+                              <span className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                                {highlight}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Contributions */}
                     <div className="mb-7">
                       <h4 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
-                        {currentLabels.highlights}
+                        {currentLabels.contributions}
                       </h4>
 
-                      <div className="grid gap-2 sm:grid-cols-2">
-                        {project.highlights.map((highlight) => (
-                          <div
-                            key={highlight}
+                      <ul className="space-y-2.5">
+                        {project.contributions.map((contribution) => (
+                          <li
+                            key={contribution}
+                            className="flex items-start gap-3"
+                          >
+                            <span
+                              className="mt-1 text-blue-600 dark:text-blue-400"
+                              aria-hidden="true"
+                            >
+                              •
+                            </span>
+
+                            <span className="leading-relaxed text-gray-600 dark:text-gray-300">
+                              {contribution}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Metrics */}
+                    {project.metrics?.length > 0 && (
+                      <div
+                        className="
+                          mb-7
+                          rounded-xl
+                          border border-blue-100
+                          bg-blue-50
+                          p-5
+                          dark:border-blue-900/50
+                          dark:bg-blue-900/20
+                        "
+                      >
+                        <h4 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
+                          {currentLabels.metrics}
+                        </h4>
+
+                        <div className="grid gap-3 sm:grid-cols-2">
+                          {project.metrics.map((metric) => (
+                            <div
+                              key={metric}
+                              className="flex items-start gap-2"
+                            >
+                              <span
+                                className="font-semibold text-blue-600 dark:text-blue-400"
+                                aria-hidden="true"
+                              >
+                                ✓
+                              </span>
+
+                              <span className="text-sm leading-relaxed text-gray-700 dark:text-gray-200">
+                                {metric}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Tech Stack */}
+                    <div className="mb-8">
+                      <h4 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
+                        {currentLabels.techStack}
+                      </h4>
+
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
                             className="
-                              flex
-                              items-start
-                              gap-2
-                              rounded-lg
-                              bg-gray-50
-                              px-3
-                              py-2.5
-                              dark:bg-gray-800/70
+                              rounded-full
+                              bg-blue-50
+                              px-3 py-1.5
+                              text-sm font-medium
+                              text-blue-800
+                              dark:bg-blue-900/40
+                              dark:text-blue-200
                             "
                           >
-                            <span
-                              className="mt-0.5 text-blue-600 dark:text-blue-400"
-                              aria-hidden="true"
-                            >
-                              ✓
-                            </span>
-
-                            <span className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                              {highlight}
-                            </span>
-                          </div>
+                            {tech}
+                          </span>
                         ))}
                       </div>
                     </div>
-                  )}
 
-                  {/* Contributions */}
-                  <div className="mb-7">
-                    <h4 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
-                      {currentLabels.contributions}
-                    </h4>
+                    {/* Actions */}
+                    <div className="flex flex-wrap gap-3">
 
-                    <ul className="space-y-2.5">
-                      {project.contributions.map((contribution) => (
-                        <li
-                          key={contribution}
-                          className="flex items-start gap-3"
-                        >
-                          <span
-                            className="mt-1 text-blue-600 dark:text-blue-400"
-                            aria-hidden="true"
-                          >
-                            •
-                          </span>
-
-                          <span className="leading-relaxed text-gray-600 dark:text-gray-300">
-                            {contribution}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Metrics */}
-                  {project.metrics?.length > 0 && (
-                    <div
-                      className="
-                        mb-7
-                        rounded-xl
-                        border border-blue-100
-                        bg-blue-50
-                        p-5
-                        dark:border-blue-900/50
-                        dark:bg-blue-900/20
-                      "
-                    >
-                      <h4 className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
-                        {currentLabels.metrics}
-                      </h4>
-
-                      <div className="grid gap-3 sm:grid-cols-2">
-                        {project.metrics.map((metric) => (
-                          <div
-                            key={metric}
-                            className="flex items-start gap-2"
-                          >
-                            <span
-                              className="font-semibold text-blue-600 dark:text-blue-400"
-                              aria-hidden="true"
-                            >
-                              ✓
-                            </span>
-
-                            <span className="text-sm leading-relaxed text-gray-700 dark:text-gray-200">
-                              {metric}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Tech Stack */}
-                  <div className="mb-8">
-                    <h4 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
-                      {currentLabels.techStack}
-                    </h4>
-
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="
-                            rounded-full
-                            bg-blue-50
-                            px-3 py-1.5
-                            text-sm font-medium
-                            text-blue-800
-                            dark:bg-blue-900/40
-                            dark:text-blue-200
-                          "
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Actions */}
-                  <div className="flex flex-wrap gap-3">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="
-                        inline-flex
-                        items-center
-                        rounded-lg
-                        bg-gray-900
-                        px-5 py-2.5
-                        font-medium
-                        text-white
-                        transition-colors
-                        hover:bg-gray-800
-                        focus:outline-none
-                        focus-visible:ring-2
-                        focus-visible:ring-gray-500
-                        focus-visible:ring-offset-2
-                        dark:bg-gray-800
-                        dark:hover:bg-gray-600
-                      "
-                    >
-                      <FaGithub className="mr-2" />
-                      {currentLabels.github}
-                    </a>
-
-                    {project.live && (
                       <a
-                        href={project.live}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
                           inline-flex
                           items-center
                           rounded-lg
-                          bg-blue-800
+                          bg-gray-900
                           px-5 py-2.5
                           font-medium
                           text-white
                           transition-colors
-                          hover:bg-blue-700
+                          hover:bg-gray-800
                           focus:outline-none
                           focus-visible:ring-2
-                          focus-visible:ring-blue-500
+                          focus-visible:ring-gray-500
                           focus-visible:ring-offset-2
-                          dark:bg-blue-700
-                          dark:hover:bg-blue-600
+                          dark:bg-gray-800
+                          dark:hover:bg-gray-600
                         "
                       >
-                        <FaExternalLinkAlt className="mr-2" />
-                        {currentLabels.liveDemo}
+                        <FaGithub
+                          className="mr-2"
+                          aria-hidden="true"
+                        />
+
+                        {currentLabels.github}
                       </a>
-                    )}
+
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="
+                            inline-flex
+                            items-center
+                            rounded-lg
+                            bg-blue-800
+                            px-5 py-2.5
+                            font-medium
+                            text-white
+                            transition-colors
+                            hover:bg-blue-700
+                            focus:outline-none
+                            focus-visible:ring-2
+                            focus-visible:ring-blue-500
+                            focus-visible:ring-offset-2
+                            dark:bg-blue-700
+                            dark:hover:bg-blue-600
+                          "
+                        >
+                          <FaExternalLinkAlt
+                            className="mr-2"
+                            aria-hidden="true"
+                          />
+
+                          {currentLabels.liveDemo}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -56,6 +56,7 @@ const Hero = () => {
 
   return (
     <section
+      id="home"
       className="
         flex
         min-h-[calc(100vh-4rem)]
@@ -92,8 +93,10 @@ const Hero = () => {
               <p
                 className="
                   ml-4
-                  text-sm font-semibold
-                  uppercase tracking-wider
+                  text-sm
+                  font-semibold
+                  uppercase
+                  tracking-wider
                   text-blue-800
                   dark:text-blue-400
                   sm:text-base
@@ -107,7 +110,8 @@ const Hero = () => {
             <h1
               className="
                 mb-6
-                text-4xl font-bold
+                text-4xl
+                font-bold
                 leading-[1.1]
                 tracking-tight
                 text-gray-900
@@ -170,8 +174,10 @@ const Hero = () => {
                   justify-center
                   rounded-lg
                   bg-blue-800
-                  px-6 py-3
-                  text-base font-semibold
+                  px-6
+                  py-3
+                  text-base
+                  font-semibold
                   text-white
                   transition-colors
                   hover:bg-blue-700
@@ -194,10 +200,13 @@ const Hero = () => {
                   items-center
                   justify-center
                   rounded-lg
-                  border border-gray-200
+                  border
+                  border-gray-200
                   bg-gray-100
-                  px-6 py-3
-                  text-base font-semibold
+                  px-6
+                  py-3
+                  text-base
+                  font-semibold
                   text-gray-900
                   transition-colors
                   hover:bg-gray-200
@@ -254,11 +263,13 @@ const Hero = () => {
           <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
             <div
               className="
-                absolute inset-0
+                absolute
+                inset-0
                 rotate-3
                 rounded-3xl
                 bg-gradient-to-br
-                from-blue-100 to-blue-50
+                from-blue-100
+                to-blue-50
                 dark:from-blue-900/50
                 dark:to-blue-800/30
               "
@@ -292,8 +303,10 @@ const Hero = () => {
               inline-flex
               items-center
               rounded-lg
-              px-3 py-2
-              text-sm font-medium
+              px-3
+              py-2
+              text-sm
+              font-medium
               text-gray-400
               transition-colors
               hover:text-gray-700
